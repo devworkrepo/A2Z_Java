@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:paddingLeft="@dimen/dim_20"
+    android:paddingRight="@dimen/dim_20"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/msg_diag_message"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_40"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="Message text here for user with buttons two buttons."
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter OTP"
+        android:layout_marginTop="@dimen/dim_20"
+        android:inputType="number"
+        />
+
+
+
+        <Button
+            android:id="@+id/msg_diag_yes_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Yes"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dim_20"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

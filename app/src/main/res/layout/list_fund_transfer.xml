@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="5dp"
+    android:layout_marginBottom="8dp"
+    android:id="@+id/ll_main_layout"
+    android:background="@drawable/bg_light_gray_10"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_idName"
+                android:textSize="12sp"
+                android:text="id name"/>
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:text="shopname"
+                android:id="@+id/tv_shopName"/>
+
+
+
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="mobile"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:id="@+id/tv_mobile"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="amount"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/tv_amount"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_arrow_hideable"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:text="1"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textColor="@color/text_color_2"
+            android:background="@drawable/bg_white_30"
+            android:id="@+id/tv_itemCount"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="match_parent"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/AppButton.Small.Primary"
+            android:text="Fund Transfer"
+            android:id="@+id/btn_fundTransfer"
+            />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/AppButton.Small.Red"
+            android:text="Fund Return"
+            android:id="@+id/btn_fundReturn"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

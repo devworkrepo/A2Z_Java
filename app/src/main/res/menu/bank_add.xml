@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.a2zsuvidhaa.in.activity.ReportsActivity">
+
+
+    <item
+
+        android:id="@+id/add_bank"
+        android:orderInCategory="100"
+        android:title="Add Bank"
+        android:icon="@drawable/ic_add_beneficiary"
+        app:showAsAction="always" />
+
+
+</menu>

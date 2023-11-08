@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEF0F1"
+        android:padding="8dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_matm_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/matm_order" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:text="Before Mpos need to place order the device or activate the service."/>
+
+                <Button
+                    android:id="@+id/btn_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refresh"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/ic_refresh"/>
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:id="@+id/cv_order_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+
+            <ScrollView
+
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_business_legality_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        mask:startIconDrawable="@drawable/ic_baseline_input_24"
+                        android:hint="Business Legality Proof Type">
+                        <EditText
+                            android:id="@+id/ed_business_legality_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:background="@android:color/transparent"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_business_address_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        mask:startIconDrawable="@drawable/ic_baseline_input_24"
+                        android:hint="Business Address Proof Type">
+                        <EditText
+                            android:id="@+id/ed_business_address_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:background="@android:color/transparent"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dotted_boder"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_shop_inside"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+
+
+                                    android:id="@+id/ll_shop_insdie"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:minHeight="176dp"
+                                    android:orientation="vertical"
+                                    android:padding="8dp"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/iv_shop_inside_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/ic_check_tick" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="file uploaded" />
+
+
+                                    <TextView
+                                        android:id="@+id/tv_shop_inside"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="8dp"
+                                        android:text="Scanning..."
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="8dp"
+                                        android:text="(Tap to view Image)"
+                                        android:textColor="@color/blue_A100"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+
+                                    android:id="@+id/iv_shop_inside"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="176dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_baseline_cloud_upload_24" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="4sp"
+                                    android:text="*"
+                                    android:textColor="@color/red"
+                                    android:textSize="28sp" />
+
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Shop Inside"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dotted_boder"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_shop_outside"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_shop_outside"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:minHeight="176dp"
+                                    android:orientation="vertical"
+                                    android:padding="8dp"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/ic_check_tick" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="file uploaded" />
+
+
+                                    <TextView
+                                        android:id="@+id/tv_shop_outside"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="8dp"
+                                        android:text="Scanning..."
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="8dp"
+                                        android:text="(Tap to view Image)"
+                                        android:textColor="@color/blue_A100"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_shop_outside"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="176dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_baseline_cloud_upload_24" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="4sp"
+                                    android:text="*"
+                                    android:textColor="@color/red"
+                                    android:textSize="28sp" />
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Shop Outside"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dotted_boder"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_business_legality"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+
+
+                                    android:id="@+id/ll_business_legality"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:minHeight="176dp"
+                                    android:orientation="vertical"
+                                    android:padding="8dp"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:id="@+id/iv_business_legality_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/ic_check_tick" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="file uploaded" />
+
+
+                                    <TextView
+                                        android:id="@+id/tv_business_legality_approved"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="8dp"
+                                        android:text="Scanning..."
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="8dp"
+                                        android:text="(Tap to view Image)"
+                                        android:textColor="@color/blue_A100"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+
+                                    android:id="@+id/iv_business_legality"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="176dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_baseline_cloud_upload_24" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="4sp"
+                                    android:text="*"
+                                    android:textColor="@color/red"
+                                    android:textSize="28sp" />
+
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Business Legality Proof"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dotted_boder"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_business_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_business_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:minHeight="176dp"
+                                    android:orientation="vertical"
+                                    android:padding="8dp"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/ic_check_tick" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="file uploaded" />
+
+
+                                    <TextView
+                                        android:id="@+id/tv_business_address"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="8dp"
+                                        android:text="Scanning..."
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="8dp"
+                                        android:text="(Tap to view Image)"
+                                        android:textColor="@color/blue_A100"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_business_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="176dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:padding="8dp"
+                                    android:src="@drawable/ic_baseline_cloud_upload_24" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="4sp"
+                                    android:text="*"
+                                    android:textColor="@color/red"
+                                    android:textSize="28sp" />
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Business Address Proof"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_proceed"
+                        style="@style/AppButton.Primary"
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="16dp"
+                        android:text="Submit"
+                        app:cornerRadius="0dp" />
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/my_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+</layout>

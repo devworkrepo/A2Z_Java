@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/commission_nav_graph"
+    app:startDestination="@id/scheme_list_fragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment android:id="@+id/scheme_list_fragment"
+        android:name="com.a2zsuvidhaa.in.fragment.commission.scheme_list.SchemeListFragment"
+        android:label="Scheme List"
+        tools:layout="@layout/fragment_common_report">
+
+        <action
+            android:id="@+id/action_commission_scheme_list_fragment_to_commission_scheme_fragment"
+            app:destination="@id/commission_scheme_fragment" />
+    </fragment>
+
+
+    <fragment android:id="@+id/commission_scheme_fragment"
+        android:name="com.a2zsuvidhaa.in.fragment.commission.scheme_detail.SchemeDetailFragment"
+        android:label="Scheme Detail"
+        tools:layout="@layout/fragment_common_report">
+
+        <argument android:name="type"
+            app:argType="string"/>
+
+        <argument android:name="title"
+            app:argType="string"/>
+
+
+    </fragment>
+
+</navigation>

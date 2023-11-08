@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.a2zsuvidhaa.in.comm.a2zsuvidhaa.in.activity.CreateRetailerActivity">
+
+
+    <ScrollView
+        android:id="@+id/sv_layout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                >
+
+
+                <TextView
+                    style="@style/TextStyle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@+id/imgBtn_back"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Retailer Profile"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/imgBtn_back"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/icon_back"
+                    android:tint="@color/white"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout style="@style/CreateRetailerLinearLayout2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                >
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_retailerImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_no_image"
+                    app:civ_border_color="#FF9800"
+                    app:civ_border_width="2dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/CreateRetailerLinearLayout1">
+                <LinearLayout style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="Full Name" />
+                    <EditText  style="@style/CreateRetailerEditText"
+                        android:id="@+id/ed_fullName"
+                        android:hint="required"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/CreateRetailerLinearLayout2">
+                    <TextView
+                        style="@style/CreateRetailerTextView"
+                        android:text="Email ID" />
+                    <EditText
+                        android:enabled="false"
+                        android:id="@+id/ed_email"
+                        style="@style/CreateRetailerEditText"
+                        android:inputType="textEmailAddress"
+                        android:hint="xyz@mymail.com (required)"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout style="@style/CreateRetailerLinearLayout1">
+                <LinearLayout style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="Mobile Number" />
+                    <EditText style="@style/CreateRetailerEditText"
+                        android:id="@+id/ed_mobile"
+                        android:inputType="number"
+                        android:hint="required"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/CreateRetailerLinearLayout2">
+                    <TextView
+                        style="@style/CreateRetailerTextView"
+                        android:text="Shop Name" />
+                    <EditText
+                        android:enabled="false"
+                        android:id="@+id/ed_shopName"
+                        style="@style/CreateRetailerEditText"
+                        android:hint="required"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout style="@style/CreateRetailerLinearLayout1">
+                <LinearLayout style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="Father Name" />
+                    <EditText style="@style/CreateRetailerEditText"
+                        android:id="@+id/ed_father"
+                        android:inputType="number"
+                        android:hint="required"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/CreateRetailerLinearLayout2">
+                    <TextView
+                        style="@style/CreateRetailerTextView"
+                        android:text="Date of Birth" />
+                    <EditText
+                        android:id="@+id/ed_dob"
+                        style="@style/CreateRetailerEditText"
+                        android:hint="required"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout style="@style/CreateRetailerLinearLayout1">
+                <LinearLayout style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="Retailer Address" />
+                    <EditText style="@style/CreateRetailerEditText"
+                        android:layout_height="55dp"
+                        android:textSize="12sp"
+                        android:gravity="start"
+                        android:id="@+id/ed_retailerAddress"
+                        android:hint="required"
+                        android:enabled="false"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/CreateRetailerLinearLayout2">
+                    <TextView
+                        style="@style/CreateRetailerTextView"
+                        android:text="Shop Address" />
+                    <EditText
+                        android:id="@+id/ed_shopAddress"
+                        android:layout_height="55dp"
+                        android:textSize="12sp"
+                        android:gravity="start"
+                        style="@style/CreateRetailerEditText"
+                        android:hint="required"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/CreateRetailerLinearLayout1">
+                <LinearLayout style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="State" />
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_white_0"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:id="@+id/spn_state"
+
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="City" />
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_white_0"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:id="@+id/spn_city"
+
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    style="@style/CreateRetailerLinearLayout2">
+                    <TextView
+                        style="@style/CreateRetailerTextView"
+                        android:text="Region" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_white_0"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        >
+
+                        <Spinner
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:id="@+id/spn_region"
+
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/CreateRetailerLinearLayout1">
+                <LinearLayout style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="Pin Code" />
+                    <EditText style="@style/CreateRetailerEditText"
+                        android:id="@+id/ed_pincode"
+                        android:inputType="number"
+                        android:hint="required"
+                        android:enabled="false"
+                        />
+
+                </LinearLayout>
+                <LinearLayout style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="Gender" />
+                    <EditText style="@style/CreateRetailerEditText"
+                        android:id="@+id/ed_gender"
+                        android:inputType="number"
+                        android:hint="required"
+                        android:enabled="false"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout style="@style/CreateRetailerLinearLayout1">
+                <LinearLayout style="@style/CreateRetailerLinearLayout2">
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:text="Aadhar No." />
+                    <EditText style="@style/CreateRetailerEditText"
+                        android:id="@+id/ed_aadharNumber"
+                        android:inputType="number"
+                        android:hint="required"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_upload_adhaar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Adharcard Image"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="right"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    style="@style/CreateRetailerLinearLayout2">
+                    <TextView
+                        style="@style/CreateRetailerTextView"
+                        android:text="Amount" />
+                    <EditText
+                        android:id="@+id/ed_amount"
+                        style="@style/CreateRetailerEditText"
+                        android:inputType="number"
+                        android:hint="required"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                style="@style/CreateRetailerLinearLayout1">
+                <LinearLayout style="@style/CreateRetailerLinearLayout2"
+                    android:layout_width="0dp"
+                    android:background="@drawable/bg_white_0"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_applicationForm"
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/icon_camera"
+                        />
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:gravity="center"
+                        android:text="Application Form" />
+
+                </LinearLayout>
+                <LinearLayout style="@style/CreateRetailerLinearLayout2"
+                    android:layout_width="0dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/bg_white_0"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/icon_camera"
+                        android:inputType="number"
+                        android:hint="required"
+                        />
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:gravity="center" />
+
+                </LinearLayout>
+                <LinearLayout style="@style/CreateRetailerLinearLayout2"
+                    android:layout_width="0dp"
+                    android:visibility="invisible"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_0"
+                    >
+
+                    <ImageView
+                        android:layout_height="120dp"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/icon_camera"
+                        android:inputType="number"
+                        android:hint="required"
+
+                        />
+                    <TextView style="@style/CreateRetailerTextView"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:id="@+id/lin_pan"
+                >
+                <TextView
+                    style="@style/CreateRetailerTextView"
+                    android:text="Pan Card No." />
+                <EditText
+                    android:id="@+id/ed_pancard"
+                    style="@style/CreateRetailerEditText"
+                    android:inputType="textCapCharacters"
+                    android:hint="required"
+
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lin_img"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout style="@style/CreateRetailerLinearLayout1">
+                    <LinearLayout style="@style/CreateRetailerLinearLayout2"
+                        android:layout_width="0dp"
+                        android:background="@drawable/bg_white_0"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_shopImage"
+                            android:layout_height="120dp"
+                            android:layout_width="match_parent"
+                            android:src="@drawable/icon_camera"
+                            />
+                        <TextView style="@style/CreateRetailerTextView"
+                            android:gravity="center"
+                            android:text="Shop Image" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rel_update"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginBottom="60dp"
+                android:gravity="center"
+
+                >
+
+                <Button
+                    android:id="@+id/btn_createRetailer"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_light_blue_0"
+                    android:text="Update Profile"
+                    android:textColor="#fff" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:background="@drawable/bg_orange_5"
+                    android:text="Login"
+                    android:textColor="#fff"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/progress_createRetailer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:indeterminateDrawable="@drawable/myprogress_style"
+                        android:visibility="invisible"
+                        tools:visibility="visible" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/myprogress_style"
+        android:id="@+id/progressState"/>
+</RelativeLayout>

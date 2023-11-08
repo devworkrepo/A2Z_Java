@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.a2zsuvidhaa.in.activity.login.ProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/myLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Mobile Number" />
+
+        <EditText
+            android:id="@+id/ed_mobile"
+            style="@style/AppEditText"
+            android:hint="###########"
+            android:maxLength="10"
+            android:inputType="number"
+            android:text="" />
+        <!--android:text="9548624861"-->
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Password" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_white_5"
+            android:orientation="horizontal">
+
+            <EditText
+
+                android:id="@+id/ed_password"
+                style="@style/AppEditText"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:maxLength="15"
+                android:background="@android:color/transparent"
+                android:hint="**************"
+                android:inputType="textPassword"
+                android:text="" />
+
+
+            <ImageButton
+                android:id="@+id/btn_showHidePassword"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_show_password"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"
+                android:text="Fetch Bill"
+                android:textColor="#2196F3"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Name :" />
+
+            <EditText
+                android:id="@+id/ed_name"
+                style="@style/AppEditText"
+                android:layout_weight="1"
+                android:hint="Your Name"
+                android:text="" />
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Email ID : " />
+
+        <EditText
+            android:id="@+id/ed_email"
+            style="@style/AppEditText"
+            android:layout_weight="1"
+            android:hint="Your Email ID"
+            android:text="" />
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Address : " />
+
+        <EditText
+            android:id="@+id/ed_address"
+            style="@style/AppEditText"
+            android:layout_weight="1"
+            android:hint="Your Address"
+            android:text="" />
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Shop Name :" />
+
+        <EditText
+            android:id="@+id/ed_shopName"
+            style="@style/AppEditText"
+            android:layout_weight="1"
+            android:hint="Your Shop Name"
+            android:text="" />
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Shop Address : " />
+
+        <EditText
+            android:id="@+id/ed_shopAddress"
+            style="@style/AppEditText"
+            android:layout_weight="1"
+            android:hint="Your Shop Address"
+            android:text="" />
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Pin No. : " />
+
+        <EditText
+            android:id="@+id/ed_pin"
+            style="@style/AppEditText"
+            android:layout_weight="1"
+            android:hint="Pin No."
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Pancard No. : " />
+
+        <EditText
+            android:id="@+id/ed_pancard"
+            style="@style/AppEditText"
+            android:layout_weight="1"
+            android:hint="Your Pancard No."
+            android:inputType="number"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/verify"
+            android:gravity="right"
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Verify Pan No."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Adhaar Card No. : " />
+
+        <EditText
+            android:id="@+id/ed_adhaarcard"
+            style="@style/AppEditText"
+            android:layout_weight="1"
+            android:hint="Your AdhaarCard No."
+            android:inputType="number"
+            android:text="" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:minHeight="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/cb_tc"
+                />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_tc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms and Condition"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_incorrect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_orange_5"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Password or Mobile number are incorrect!"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="60dp"
+            android:gravity="center"
+
+            >
+
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+
+                android:background="@drawable/bg_light_blue_5"
+                android:text="Sign Up"
+                android:textColor="#fff" />
+
+            <RelativeLayout
+                android:id="@+id/rl_progress"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/bg_orange_5"
+                android:text="Login"
+                android:textColor="#fff"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/myprogress_style"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>

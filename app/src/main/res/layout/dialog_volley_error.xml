@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_5"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/layout">
+
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        tools:visibility="visible"
+        android:src="@drawable/timeout_icon_png"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/text_color_3"
+            android:id="@+id/tv_heading"
+            android:textStyle="bold"
+            android:text="Time Out!"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/text_color_3"
+            android:id="@+id/tv_errorType"
+            android:textStyle="bold"
+            android:text="(e)"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="#807676"
+        android:text="Timeout due to weak internet connection."/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:textColor="@color/text_color_2"
+        android:text="(status may be success)"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/text_color_1"
+        android:id="@+id/tv_subHeading"
+        android:text="Please check your account statement"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/AppButton.Small.Primary"
+        android:text="OK"
+        android:id="@+id/btn_ok"/>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<resources>
+
+
+    <dimen name="dim_4">7.6dp</dimen>
+    <dimen name="dim_5">9.5dp</dimen>
+    <dimen name="dim_8">15.2dp</dimen>
+    <dimen name="dim_10">19dp</dimen>
+    <dimen name="dim_20">38dp</dimen>
+    <dimen name="dim_30">57dp</dimen>
+    <dimen name="dim_40">76dp</dimen>
+    <dimen name="dim_70">133dp</dimen>
+    <dimen name="dim_100">190dp</dimen>
+    <dimen name="dim_300">570dp</dimen>
+
+</resources>

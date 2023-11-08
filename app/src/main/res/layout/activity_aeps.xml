@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:keepScreenOn="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:elevation="5dp"
+                android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
+
+
+            <ScrollView
+                android:layout_below="@id/toolbar"
+                android:id="@+id/sv_layout"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dim_10"
+                    android:layout_marginLeft="@dimen/dim_10"
+                    android:layout_marginBottom="@dimen/dim_5"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/TextStyle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_2"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:text="AePS" />
+
+                    <TextView
+                        style="@style/TextStyle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/yellow_dark"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:text="( Aadhaar Enabled Payment System )" />
+
+                    <TextView
+                        style="@style/TextStyle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="0dp"
+                        android:text="Select Device" />
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+
+                        android:background="@drawable/bg_white_5"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:orientation="horizontal"
+                        android:singleLine="true"
+
+                        >
+
+                        <Spinner
+
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:id="@+id/spn_selectDevice"
+
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/TextStyle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="0dp"
+                        android:text="Bank" />
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/atv_bank_name"
+                        style="@style/AppEditText"
+                        android:textSize="16sp"
+                        android:hint="Enter Bank name"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:textColor="@color/text_color_2"
+                        android:background="@drawable/bg_white_5" />
+
+                    <TextView
+                        style="@style/TextStyle1"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:text="Aadhar No:" />
+
+                    <EditText
+                        android:id="@+id/ed_aadharNumber"
+                        style="@style/AppEditText"
+                        android:textSize="16sp"
+
+                        android:inputType="number"
+                        android:maxLength="14"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:hint="Enter 12 digit Aadhar number"
+                        android:textColor="@color/text_color_2"
+                        android:background="@drawable/bg_white_5" />
+
+
+                    <TextView
+                        style="@style/TextStyle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:text="Service Type" />
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_white_5"
+                        android:gravity="left"
+                        android:inputType="number"
+                        android:orientation="horizontal"
+                        android:singleLine="true"
+
+                        >
+
+                        <Spinner
+
+                            android:id="@+id/spn_serviceType"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:inputType="number"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ll_amount"
+                        tools:visibility="visible"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextStyle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Withdrawl Amount" />
+
+                        <EditText
+                            android:id="@+id/ed_Amount"
+                            style="@style/AppEditText"
+                            android:textSize="16sp"
+                            android:maxLength="5"
+                            android:inputType="number"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:hint="Amount Range 100-10000"
+                            android:textColor="@color/text_color_2"
+                            android:background="@drawable/bg_white_5" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/TextStyle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="0dp"
+                        android:text="Customer Mobile Number" />
+
+                    <EditText
+                        android:id="@+id/ed_customerNumber"
+                        style="@style/AppEditText"
+                        android:textSize="16sp"
+                        android:letterSpacing="0.1"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:text=""
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:hint="Enter 10 digit mobile number"
+                        android:textColor="@color/text_color_2"
+                        android:background="@drawable/bg_white_5" />
+
+
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:background="@drawable/bg_light_blue_5"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/btnCapture"
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:textColor="@color/white"
+                                android:background="@android:color/transparent"
+                                android:layout_weight="3"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:text="Capture/Proceed" />
+
+                            <ProgressBar
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:layout_centerInParent="true"
+                                tools:visibility="visible"
+                                android:indeterminateDrawable="@drawable/myprogress_style"
+                                android:visibility="gone"
+                                android:id="@+id/progressProceed" />
+                        </RelativeLayout>
+
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_red_5"
+                            android:src="@drawable/ic_refresh"
+                            android:layout_marginLeft="2dp"
+                            android:id="@+id/btnReset"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btnAuthRequest"
+                        android:background="@drawable/bg_light_blue"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:text="Auth Request" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                tools:visibility="visible"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/myprogress_style"
+                android:id="@+id/progress_bank" />
+
+
+        </RelativeLayout>
+</layout>

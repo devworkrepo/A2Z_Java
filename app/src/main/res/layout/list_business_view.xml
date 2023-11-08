@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:padding="2dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/layout_commission_view">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Main Heading"
+        android:padding="10dp"
+        android:id="@+id/tv_heading"
+        android:textColor="@color/text_color_2"
+        android:textStyle="bold"
+        android:textSize="20sp"
+
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:numColumns="2"
+        android:id="@+id/gridView">
+
+    </GridView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/text_color_3"/>
+
+<!--    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Main Heading"
+        android:padding="10dp"
+        android:id="@+id/tv_heading"
+        android:textColor="@color/text_color_2"
+        android:textStyle="bold"
+        android:textSize="20sp"
+
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                android:id="@+id/ll_success"
+                android:padding="5dp"
+                android:background="@drawable/bg_white_5"
+                android:alpha="0.2"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Success"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/success"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Total Sale"
+                    />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_sTotalSale" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:layout_height="21dp"
+                        android:text="Commission" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_sCommission" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Charge"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_sCharge" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Txn Count"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_sTxnCount"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                android:padding="5dp"
+                android:background="@drawable/bg_white_5"
+                android:id="@+id/ll_pending"
+                android:alpha="0.2"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/warning"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Total Sale"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_pTotalSale"
+                        />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:layout_height="21dp"
+                        android:text="Commission" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_pCommission" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Charge"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_pCharge" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Txn Count"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_pTxnCount" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_failed"
+                android:padding="5dp"
+                android:alpha="0.2"
+                android:background="@drawable/bg_white_5"
+                android:layout_margin="2dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Failed"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/failed"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Total Sale"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_fTotal_sale" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:layout_height="21dp"
+                        android:text="Commission" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_fCommission"
+                        />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Charge"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_fCharge" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Txn Count"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_fTxn_count"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_margin="2dp"
+                android:id="@+id/ll_inProcess"
+                android:background="@drawable/bg_white_5"
+                android:alpha="0.2"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="In Process"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/text_color_2"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Total Sale"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_ipTotal_sale" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:layout_height="21dp"
+                        android:text="Commission" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_ipCommission" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Charge"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_ipCharge" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Txn Count"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_ipTxn_count" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_PtxnCredit"
+                android:alpha="0.2"
+                android:padding="5dp"
+                android:background="@drawable/bg_white_5"
+                android:layout_margin="2dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PTxnCredit"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/failed"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Total Sale"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_ptcTotal_sale" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:layout_height="21dp"
+                        android:text="Commission" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_ptcCommission"
+                        />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Charge"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_ptcCharge" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Txn Count"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_ptcTxn_count"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                android:id="@+id/ll_refundSuccess"
+                android:padding="5dp"
+                android:background="@drawable/bg_white_5"
+                android:alpha="0.2"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Refund Success"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/text_color_2"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Total Sale"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_rsTotal_sale" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:layout_height="21dp"
+                        android:text="Commission" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_rsCommission" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Charge"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_rsCharge" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Txn Count"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_rsTxn_count" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/ll_refundAvailable"
+                android:alpha="0.2"
+                android:padding="5dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_white_5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Refund Available"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/failed"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Total Sale"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_raTotal_sale" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:layout_height="21dp"
+                        android:text="Commission" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_raCommission"
+                        />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Charge"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_raCharge" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Txn Count"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_raTxn_count"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                android:id="@+id/ll_refunded"
+                android:background="@drawable/bg_white_5"
+                android:alpha="0.2"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Refunded"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/text_color_2"
+                    android:padding="5dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Total Sale"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_rTotal_sale" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:layout_height="21dp"
+                        android:text="Commission" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_rCommission" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Charge"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_rCharge" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextStyleCommission"
+                        android:text="Txn Count"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  :  " />
+
+
+                    <TextView
+
+                        style="@style/TextStyleCommission"
+                        android:layout_weight="1"
+                        android:text="0.00"
+                        android:id="@+id/tv_rTxn_count" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_color_3"/>
+
+
+    </LinearLayout>-->
+
+
+</LinearLayout>

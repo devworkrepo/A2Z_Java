@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="dim_4">3.6dp</dimen>
+    <dimen name="dim_5">4.5dp</dimen>
+    <dimen name="dim_8">7.2dp</dimen>
+    <dimen name="dim_10">9dp</dimen>
+    <dimen name="dim_20">18dp</dimen>
+    <dimen name="dim_30">27dp</dimen>
+    <dimen name="dim_40">36dp</dimen>
+    <dimen name="dim_70">63dp</dimen>
+    <dimen name="dim_100">90dp</dimen>
+    <dimen name="dim_300">270dp</dimen>
+
+
+</resources>

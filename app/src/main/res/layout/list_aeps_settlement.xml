@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.a2zsuvidhaa.in.model.BankDetail" />
+    </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <LinearLayout
+
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/ll_main_layout"
+          android:layout_marginBottom="12dp"
+          android:layout_marginTop="12dp"
+          android:orientation="horizontal">
+
+          <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:padding="12dp"
+              android:layout_gravity="center_vertical"
+              android:background="@drawable/bg_white_30"
+              android:src="@drawable/icon_bank"/>
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="8dp"
+
+              android:orientation="vertical">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="14sp"
+                  android:textColor="@color/black"
+                  tools:text="Account holder name"
+                  android:text="@{item.beneName}"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="14sp"
+                  android:layout_marginTop="4dp"
+                  android:text="@{item.bankName}"
+                  tools:text="Bank Name"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="14sp"
+                  android:layout_marginTop="4dp"
+                  android:text="@{item.account_number}"
+                  tools:text="440048893483"/>
+
+              <TextView
+                  android:id="@+id/tv_message"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="10sp"
+                  android:layout_marginTop="4dp"
+                  android:textColor="@color/colorPrimary"
+                  android:text="@{item.messageOne}"
+                  tools:text="dummy remark--- testing "/>
+
+
+
+
+
+          </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:gravity="end"
+             android:orientation="vertical">
+             <ImageView
+                 android:id="@+id/iv_send"
+                 android:layout_width="42dp"
+                 android:layout_height="0dp"
+                 android:rotation="-40"
+                 android:layout_weight="1"
+                 android:padding="7dp"
+                 android:visibility="gone"
+                 android:src="@drawable/ic_baseline_send_24"
+                 app:tint="@color/colorPrimaryDark" />
+
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:paddingStart="8dp"
+                 android:paddingEnd="8dp"
+                 android:paddingTop="4dp"
+                 android:paddingBottom="4dp"
+                 android:gravity="center"
+                 android:drawableStart="@drawable/ic_baseline_file_copy_24"
+                 android:textSize="10sp"
+                 android:id="@+id/btn_upload_document"
+                 android:background="@drawable/bg_white_30"
+                 android:text="Upload\nDocuments"/>
+
+           <!--  <com.google.android.material.button.MaterialButton
+                 android:minWidth="10dp"
+                 app:cornerRadius="30dp"
+                 android:textSize="10sp"
+                 android:layout_height="32dp"
+                 android:layout_width="wrap_content"
+                 android:insetLeft="0dp"
+                 android:insetBottom="0dp"
+                 android:insetTop="0dp"
+                 android:insetRight="0dp"
+                 android:text="  Upload Document"
+                 android:id="@+id/btn_upload_document"
+                 android:backgroundTint="@color/warning"
+           />-->
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:cornerRadius="30dp"
+                 android:id="@+id/tv_doc_uploaded"
+                 android:textSize="10sp"
+                 android:visibility="gone"
+                 tools:visibility="visible"
+                 android:paddingStart="8dp"
+                 android:paddingEnd="8dp"
+                 android:paddingTop="4dp"
+                 android:gravity="center"
+                 android:paddingBottom="4dp"
+                 android:layout_gravity="center"
+                 android:textAlignment="center"
+                 android:drawablePadding="4dp"
+                 android:drawableTint="@color/green"
+                 android:drawableStart="@drawable/ic_check_tick"
+                 android:background="@drawable/bg_white_30"
+                 android:textColor="@color/green"
+                 android:text="Screaning"
+                 android:minWidth="0dp"
+                 />
+
+             <TextView
+                 android:id="@+id/tv_status"
+                 android:layout_width="wrap_content"
+                 android:layout_height="0dp"
+                 android:layout_weight="1"
+                 android:textSize="12sp"
+                 android:paddingStart="8dp"
+                 android:layout_gravity="center"
+                 android:paddingEnd="8dp"
+                 android:paddingTop="4dp"
+                 android:paddingBottom="4dp"
+                 android:gravity="center"
+                 android:layout_marginTop="8dp"
+                 android:textColor="@color/green"
+                 android:text="Active"/>
+         </LinearLayout>
+
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:background="@color/grey"/>
+  </LinearLayout>
+</layout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEF0F1"
+        tools:context=".activity.recharge.ProviderActivity">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="6dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+      <androidx.cardview.widget.CardView
+          android:visibility="gone"
+          tools:visibility="visible"
+          android:id="@+id/cv_content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/appBarLayout"
+          app:cardCornerRadius="8dp"
+          app:contentPadding="8dp"
+          android:layout_margin="8dp">
+
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+                  <LinearLayout
+                      android:id="@+id/ll_state"
+                      android:layout_width="match_parent"
+                      android:layout_height="52dp"
+                      android:gravity="left"
+                      android:visibility="gone"
+                      tools:visibility="visible"
+                      android:layout_marginLeft="8dp"
+                      android:layout_marginRight="8dp"
+                      android:inputType="number"
+                      android:orientation="horizontal"
+                      android:background="@drawable/bg_back_white_8_2"
+                      android:singleLine="true">
+
+                      <!--<Spinner
+                          android:id="@+id/spn_state"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:gravity="left"
+                          android:inputType="number"
+
+                          />-->
+
+                      <TextView
+                          android:id="@+id/tv_state"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:padding="8dp"
+                          android:textSize="16sp"
+                          android:textStyle="bold"
+                          android:drawableEnd="@drawable/v_arrow_down"
+                          android:layout_gravity="center_vertical"
+                          android:text="Select State"/>
+                  </LinearLayout>
+
+
+              <EditText
+                  android:id="@+id/ed_search"
+                  android:layout_width="match_parent"
+                  android:layout_height="52dp"
+                  android:hint="Search Provider Name"
+                  android:padding="8dp"
+                  android:drawableStart="@drawable/ic_search"
+                  android:drawableTint="@color/black"
+                  android:layout_margin="8dp"
+                  android:background="@drawable/bg_back_white_8_2"
+                  />
+
+
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:layout_height="match_parent"
+                  android:id="@+id/recyclerView"
+                  android:layout_margin="8dp"
+                  android:layout_width="match_parent">
+
+              </androidx.recyclerview.widget.RecyclerView>
+          </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="30dp"
+            android:id="@+id/ll_something"
+            android:background="@drawable/bg_white_5"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/yellow_dark"
+                android:fontFamily="@font/cagliostro"
+                android:textSize="22sp"
+                android:text="Opps something went wrong" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/yellow_dark"
+                android:fontFamily="@font/cagliostro"
+                android:textSize="22sp"
+                android:text="retry" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_blue_30"
+                android:id="@+id/btn_refresh"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_refresh" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/myprogress_style"
+            android:padding="10dp" />
+
+    </RelativeLayout>
+</layout>

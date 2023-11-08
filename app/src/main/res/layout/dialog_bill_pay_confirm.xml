@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/layout">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:textColor="#009688"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:text="Confirm Bill Payment"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FF9800"
+            android:layout_marginTop="0dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_state_circle"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Number"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="902382484"
+                    android:textSize="18sp"
+                    android:id="@+id/tv_number"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_2"
+                    android:text="Amount"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="18sp"
+                    android:id="@+id/tv_amount"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Opertor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="operator"
+                    android:textSize="18sp"
+                    android:id="@+id/tv_operator"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lin_charge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Convenience Fee"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:id="@+id/tv_charge"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lin_comm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Commission"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:id="@+id/tv_commission"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Amount"/>
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:hint="0.0"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:maxLength="8"
+                    android:id="@+id/ed_confirmAmount"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_marginTop="20dp"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginLeft="15dp"
+               android:id="@+id/ll_action"
+               android:layout_marginRight="15dp"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+
+               <com.google.android.material.button.MaterialButton
+                   style="@style/AppButton.Red"
+                   android:id="@+id/btn_cancel"
+                   android:text="Cancel"/>
+
+               <View
+                   android:layout_width="0dp"
+                   android:layout_height="0dp"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.3"
+                   />
+
+               <com.google.android.material.button.MaterialButton
+                   style="@style/AppButton.Primary"
+                   android:id="@+id/btn_confirm"
+                   android:text="Confirm"/>
+
+           </LinearLayout>
+       </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

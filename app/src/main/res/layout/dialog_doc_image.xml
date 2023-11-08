@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Image Preview"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_title"
+        android:textColor="@color/white2"
+        android:background="@color/colorPrimaryDark"
+        android:backgroundTint="@color/colorPrimaryDark"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_below="@id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_back">
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/my_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+       <androidx.cardview.widget.CardView
+           android:layout_margin="12dp"
+           android:clipToOutline="true"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <ImageView
+               android:id="@+id/image_view"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:scaleType="fitCenter" />
+       </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:text="Go Back"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="30dp"
+    android:id="@+id/ll_dialogMainLayout"
+    android:orientation="vertical"
+    android:background="@drawable/bg_white_0">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update available"
+        android:padding="10dp"
+        android:textColor="#009688"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_margin="0dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="An update for A2Z Suvidhaa MONEY is available on Play Store ."
+        android:padding="10dp"
+        android:id="@+id/tv_updateMessage"
+
+        android:textColor="#5C6363"
+        android:gravity="left"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:layout_margin="0dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Version : "
+        android:paddingLeft="10dp"
+        android:textColor="#5C6363"
+        android:gravity="left"
+        android:id="@+id/tv_currentVersion"
+        android:textStyle="normal"
+        android:textSize="13sp"
+        android:layout_margin="0dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Version : "
+        android:paddingLeft="10dp"
+        android:textColor="#3C8B40"
+        android:gravity="left"
+        android:textStyle="normal"
+        android:id="@+id/tv_updateVersion"
+        android:textSize="13sp"
+        android:layout_margin="0dp"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/btn_update"
+            android:layout_alignParentRight="true"
+            android:textColor="#fff"
+            android:background="@drawable/bg_light_blue_5"
+            android:text="Update"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_5"
+            android:gravity="center"
+            android:text="cancel"
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_cancel"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

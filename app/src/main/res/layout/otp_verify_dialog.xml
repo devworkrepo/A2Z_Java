@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_otp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="Please wait for 1min to receive OTP. "
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_below="@+id/layout_header"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextone"
+                    android:layout_width="40dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="5dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:background="@drawable/bg_white_5"
+                    android:gravity="center"
+                    android:nextFocusRight="@+id/editText_two"
+                    android:textSize="28sp"
+                    android:alpha="0.7"
+                    android:textStyle="bold">
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:background="@drawable/bg_white_5"
+                    android:id="@+id/editTexttwo"
+                    android:layout_width="40dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="5dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:alpha="0.7"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:background="@drawable/bg_white_5"
+                    android:id="@+id/editTextthree"
+                    android:layout_width="40dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="5dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:alpha="0.7"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:background="@drawable/bg_white_5"
+                    android:id="@+id/editTextfour"
+                    android:layout_width="40dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="5dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:alpha="0.7"
+                    android:textStyle="bold" />
+                <EditText
+                    android:background="@drawable/bg_white_5"
+                    android:id="@+id/editTextFive"
+                    android:layout_width="40dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="5dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:alpha="0.7"
+                    android:textStyle="bold" />
+                <EditText
+                    android:background="@drawable/bg_white_5"
+                    android:id="@+id/editTextSix"
+                    android:layout_width="40dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="5dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:alpha="0.7"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_below="@+id/layout_otp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/btn_submit"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/bg_light_blue_0"
+                android:text="SUBMIT"
+                android:textColor="#fff" />
+
+
+
+            <Button
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_below="@+id/layout_otp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/btn_resend"
+                android:layout_marginRight="30dp"
+                android:background="#5A5C5A"
+                android:text="Resend OTP"
+                android:textColor="#fff" />
+        </LinearLayout>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:tint="@color/black"
+            android:src="@drawable/ic_cross_close2"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

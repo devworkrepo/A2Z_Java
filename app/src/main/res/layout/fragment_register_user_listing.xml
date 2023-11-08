@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@color/background"
+     android:orientation="vertical">
+
+
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:contentPadding="16dp"
+      android:id="@+id/cv_content"
+      app:cardCornerRadius="8dp"
+      android:layout_margin="8dp">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recycler_view"
+        tools:listitem="@layout/list_complete_user"
+        android:layout_height="match_parent" />
+
+
+  </androidx.cardview.widget.CardView>
+
+  <include
+      layout="@layout/layout_progress_bar_card_view"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:layout_centerInParent="true"
+      android:id="@+id/progress"/>
+
+
+  <include
+      android:id="@+id/layout_no_item_found"
+      layout="@layout/layout_blank"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:visibility="gone" />
+
+
+  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:text="Filter"
+      android:id="@+id/fab_filter"
+      android:textColor="@color/white"
+      app:iconTint="@color/white"
+      app:icon="@drawable/ic_baseline_filter_list_24"
+      android:layout_margin="16dp"
+      />
+
+ </RelativeLayout>
+</layout>

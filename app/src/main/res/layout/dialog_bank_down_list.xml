@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_white"
+    app:contentPadding="16dp"
+    android:id="@+id/root_layout"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Bank Down List"
+              android:gravity="center"
+              android:layout_centerHorizontal="true"
+              style="@style/TextAppearance.AppCompat.Title"/>
+          <ImageButton
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:padding="12dp"
+              android:src="@drawable/ic_cross_close2"
+              android:layout_alignParentEnd="true"
+              android:tint="@color/black2"
+              android:scaleType="fitXY"
+              android:id="@+id/btn_dismiss"
+              android:background="@android:color/transparent"/>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/btn_dismiss"
+              android:orientation="vertical">
+
+
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="16dp"
+                  tools:text="Hello Dev"
+                  android:textSize="16sp"
+                  android:lineSpacingExtra="8dp"
+                  android:textColor="@color/red"
+                  android:id="@+id/tv_bank_down"/>
+
+
+          </LinearLayout>
+      </RelativeLayout>
+  </ScrollView>
+
+
+</androidx.cardview.widget.CardView>

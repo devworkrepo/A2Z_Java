@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+       <LinearLayout
+           android:visibility="gone"
+           android:id="@+id/layout_done"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="16dp"
+           android:orientation="vertical">
+
+
+           <ImageView
+               android:layout_width="80dp"
+               android:layout_height="80dp"
+               android:src="@drawable/ic_check_tick"
+               android:layout_gravity="center"
+               app:tint="@color/green" />
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:textSize="18sp"
+               android:padding="16dp"
+               android:text="Your Aadhaar Kyc completed"/>
+
+       </LinearLayout>
+
+       <LinearLayout
+
+           android:id="@+id/layout_content"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="8dp"
+           android:background="#EEF0F1">
+
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:contentPadding="8dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:id="@+id/til_aadhaar_number"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/ed_aadhar_number"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@android:color/transparent"
+                           android:inputType="number"
+                           android:singleLine="true"
+                           android:paddingStart="0dp"
+                           android:maxLength="14"
+                           android:hint="Aadhaar Number"
+                           android:textColorHighlight="@color/edit_text_heading"
+                           android:textStyle="normal" />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:id="@+id/til_mobile_number"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="16dp"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/ed_mobile_number"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@android:color/transparent"
+                           android:inputType="number"
+                           android:singleLine="true"
+                           android:paddingStart="0dp"
+                           android:maxLength="10"
+                           android:hint="Mobile Number (linked with aadhaar)"
+                           android:textColorHighlight="@color/edit_text_heading"
+                           android:textStyle="normal" />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                   <Button
+                       android:alpha="0.5"
+                       android:clickable="false"
+                       android:enabled="false"
+                       android:id="@+id/btn_submit"
+                       style="@style/AppButton.Primary"
+                       android:layout_marginTop="16dp"
+                       android:text="Submit"
+                       android:layout_width="match_parent"/>
+               </LinearLayout>
+           </com.google.android.material.card.MaterialCardView>
+
+       </LinearLayout>
+
+
+   </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:id="@+id/ll_main_layout"
+    android:gravity="center"
+    android:background="@drawable/bg_light_gray_10">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Balance Update"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:layout_margin="0dp"
+            style="@style/TextStyle1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FF9800"
+            android:layout_marginTop="0dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/text_color_3"
+                    android:text="Amount"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:text="   :   "/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/text_color_2"
+                    android:id="@+id/tv_amount"
+                    android:text="0.00"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/text_color_3"
+                    android:text="Agent Name"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:text="   :   "/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color_2"
+                    android:id="@+id/tv_agentName"
+                    android:text="agent name"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/text_color_3"
+                    android:text="Reference ID"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:text="   :   "/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color_2"
+                    android:id="@+id/tv_refId"
+                    android:text="refId"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FF9800"
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:text="Remark" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_white_5"
+            android:gravity="left"
+            android:inputType="number"
+            android:orientation="horizontal"
+            android:singleLine="true"
+
+            >
+
+            <Spinner
+
+                android:id="@+id/spn_remark"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:inputType="number"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:text="Bank Charge" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_white_5"
+            android:gravity="left"
+            android:inputType="number"
+            android:orientation="horizontal"
+            android:singleLine="true"
+
+            >
+
+            <Spinner
+
+                android:id="@+id/spn_bankCharge"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:inputType="number"
+
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:text="Status" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_white_5"
+            android:gravity="left"
+            android:inputType="number"
+            android:orientation="horizontal"
+            android:singleLine="true"
+
+            >
+
+            <Spinner
+                android:id="@+id/spn_status"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:inputType="number"
+
+                />
+
+
+        </LinearLayout>
+        <TextView
+
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:text="Remark" />
+
+        <EditText
+            style="@style/AppEditText2"
+            android:id="@+id/ed_remark"
+            android:singleLine="false"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_white_5"
+            android:hint="Remark 2"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            >
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_action_button"
+                >
+
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/AppButton.Primary"
+                    android:id="@+id/btn_sendNow"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="Send Now"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/AppButton.Red"
+                    android:id="@+id/btn_cancel"
+                    android:layout_marginTop="16dp"
+                    android:text="Cancel"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_processing"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:text="don't press back button"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/success"
+                    android:text="Processing please wait.."/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

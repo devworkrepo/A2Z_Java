@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context="com.a2zsuvidhaa.in.fragment.AdminDashboardFragment">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textStyle="bold"
+           android:textSize="16sp"
+           android:layout_marginTop="10dp"
+           android:textColor="@color/text_color_1"
+           android:text="Balances"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="10dp"
+           android:layout_marginTop="5dp"
+           android:orientation="vertical"
+           android:background="@drawable/bg_white_5">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="10dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   style="@style/TextStyleAdmin1"
+                   android:text="TOTAL BALANCE"/>
+
+               <TextView
+                   style="@style/TextStyleAdmin3"
+                   android:text=" :  Rs. "/>
+               <TextView
+                   style="@style/TextStyleAdmin2"
+                   android:id="@+id/tv_total_balance"
+                   android:text="0.00"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="10dp"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="3">
+                   <TextView
+                       style="@style/TextStyleAdmin1"
+                       android:layout_weight="5"
+                       android:text="SUPER ADMIN"/>
+                   <TextView
+                       style="@style/TextStyleAdmin1"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="right"
+                       android:id="@+id/tv_superAdminCount"
+                       android:paddingRight="10dp"
+                       android:text="[0]"/>
+               </LinearLayout>
+
+               <TextView
+                   style="@style/TextStyleAdmin3"
+                   android:text=" :  Rs. "/>
+               <TextView
+                   style="@style/TextStyleAdmin2"
+                   android:id="@+id/tv_superAdminBalance"
+                   android:text="0.00"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="10dp"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="3">
+                   <TextView
+                       style="@style/TextStyleAdmin1"
+                       android:layout_weight="5"
+                       android:text="DISTRIBUTOR"/>
+                   <TextView
+                       style="@style/TextStyleAdmin1"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="right"
+                       android:id="@+id/tv_distributorCount"
+                       android:paddingRight="10dp"
+                       android:text="[0]"/>
+               </LinearLayout>
+
+               <TextView
+                   style="@style/TextStyleAdmin3"
+                   android:text=" :  Rs. "/>
+               <TextView
+                   android:id="@+id/tv_distributorBalance"
+                   style="@style/TextStyleAdmin2"
+                   android:text="0.00"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="10dp"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="3">
+
+                   <TextView
+                       style="@style/TextStyleAdmin1"
+                       android:layout_weight="5"
+                       android:text="RETAILER" />
+                   <TextView
+                       style="@style/TextStyleAdmin1"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="right"
+                       android:id="@+id/tv_retailerCount"
+                       android:paddingRight="10dp"
+                       android:text="[0]"/>
+               </LinearLayout>
+
+               <TextView
+                   style="@style/TextStyleAdmin3"
+                   android:text=" :  Rs. "/>
+               <TextView
+                   style="@style/TextStyleAdmin2"
+                   android:id="@+id/tv_retailerBalance"
+                   android:text="0.00"/>
+
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textStyle="bold"
+           android:textSize="16sp"
+           android:layout_marginTop="20dp"
+           android:textColor="@color/text_color_1"
+           android:text="Transaction Status"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="10dp"
+           android:layout_marginTop="5dp"
+           android:orientation="vertical"
+           android:background="@drawable/bg_white_5">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="10dp"
+               android:background="@drawable/bg_light_blue_5"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="3">
+                   <TextView
+                       style="@style/TextStyleAdmin4"
+                       android:text="SUCCESS"/>
+                   <TextView
+                       style="@style/TextStyleAdmin4"
+                       android:layout_weight="1"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="right"
+                       android:id="@+id/tv_succesCount"
+                       android:paddingRight="10dp"
+                       android:text="[0]"/>
+               </LinearLayout>
+
+               <TextView
+                   style="@style/TextStyleAdmin4"
+                   android:layout_width="wrap_content"
+                   android:layout_weight="0"
+                   android:text=" :  Rs. "/>
+               <TextView
+                   style="@style/TextStyleAdmin4"
+                   android:id="@+id/tv_successBalance"
+                   android:text="0.00"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="10dp"
+               android:layout_marginTop="5dp"
+               android:background="@drawable/bg_warning_5"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="3">
+                   <TextView
+                       style="@style/TextStyleAdmin4"
+                       android:text="PENDING"/>
+                   <TextView
+                       style="@style/TextStyleAdmin4"
+                       android:layout_weight="1"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="right"
+                       android:id="@+id/tv_pendingCount"
+                       android:paddingRight="10dp"
+                       android:text="[0]"/>
+               </LinearLayout>
+
+               <TextView
+                   style="@style/TextStyleAdmin4"
+                   android:layout_width="wrap_content"
+                   android:layout_weight="0"
+                   android:text=" :  Rs. "/>
+               <TextView
+                   style="@style/TextStyleAdmin4"
+                   android:id="@+id/tv_pendingBalance"
+                   android:text="0.00"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="10dp"
+               android:layout_marginTop="5dp"
+               android:background="@drawable/bg_red_5"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="3">
+                   <TextView
+                       style="@style/TextStyleAdmin4"
+                       android:text="FAILED"/>
+                   <TextView
+                       style="@style/TextStyleAdmin4"
+                       android:layout_weight="1"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="right"
+                       android:paddingRight="10dp"
+                       android:id="@+id/tv_failedCount"
+                       android:text="[0]"/>
+               </LinearLayout>
+
+               <TextView
+                   style="@style/TextStyleAdmin4"
+                   android:layout_width="wrap_content"
+                   android:layout_weight="0"
+                   android:text=" :  Rs. "/>
+               <TextView
+                   style="@style/TextStyleAdmin4"
+                   android:id="@+id/tv_failedBalance"
+                   android:text="0.00"/>
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:padding="10dp"
+               android:layout_marginTop="5dp"
+               android:background="@drawable/bg_refunded_5"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="3">
+                   <TextView
+                       style="@style/TextStyleAdmin4"
+                       android:text="REFUNDED"/>
+                   <TextView
+                       style="@style/TextStyleAdmin4"
+                       android:layout_weight="1"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="right"
+                       android:id="@+id/tv_refundedCount"
+                       android:paddingRight="10dp"
+                       android:text="[0]"/>
+               </LinearLayout>
+
+               <TextView
+                   style="@style/TextStyleAdmin4"
+                   android:layout_width="wrap_content"
+                   android:layout_weight="0"
+                   android:text=" :  Rs. "/>
+               <TextView
+                   style="@style/TextStyleAdmin4"
+                   android:id="@+id/tv_refundedBalance"
+                   android:text="0.00"/>
+
+
+           </LinearLayout>
+
+       </LinearLayout>
+       <TextView
+           android:id="@+id/tv_incorrect"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp"
+           android:background="@drawable/bg_orange_5"
+           android:gravity="center"
+           android:padding="10dp"
+           android:text="Password or Mobile number are incorrect!"
+           android:textColor="@color/white"
+           android:textSize="17sp"
+           android:visibility="gone"
+           tools:visibility="visible" />
+
+       <RelativeLayout
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="10dp"
+           android:layout_gravity="center_horizontal"
+           android:src="@drawable/ic_refresh">
+
+           <ImageButton
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:background="@drawable/bg_blue_30"
+               android:id="@+id/btn_refresh"
+               android:visibility="gone"
+               tools:visibility="visible"
+               android:layout_gravity="center_horizontal"
+               android:src="@drawable/ic_refresh"/>
+
+           <ProgressBar
+               android:id="@+id/progressBar"
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:layout_centerInParent="true"
+               android:indeterminateDrawable="@drawable/myprogress_style" />
+
+       </RelativeLayout>
+
+   </LinearLayout>
+
+
+
+
+
+</ScrollView>

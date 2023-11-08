@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/bg_balance"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_number"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                tools:text="87878544545" />
+
+                            <TextView
+                                android:id="@+id/tv_role"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                tools:text="Retailer" />
+
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="invisible"
+                                tools:visibility="visible">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:clickable="true"
+                                    android:text="Available Balance"
+                                    android:textColor="@color/white2"
+                                    android:textSize="14sp"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/money_bag"
+                                        app:tint="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/tv_amount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:clickable="true"
+                                        android:paddingStart="8dp"
+                                        android:paddingEnd="8dp"
+                                        android:text="0.00"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"
+                                        android:visibility="visible" />
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/icon_refresh"
+                                        app:tint="@color/white" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_view_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ll_balance"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_border_white"
+                                android:clickable="true"
+                                android:paddingLeft="12dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="12dp"
+                                android:paddingBottom="4dp"
+                                android:text="Available Balance"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:visibility="visible" />
+
+                            <ProgressBar
+                                android:id="@+id/tv_amount_progress_bar"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:progressTint="@color/white"
+                                android:layout_centerInParent="true"
+                                android:indeterminateTint="@color/colorPrimaryDark"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="24dp"
+                            android:background="@color/white2" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_top_up_wallet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center_vertical"
+                                android:minWidth="100dp"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/ic_baseline_account_balance_wallet_24"
+                                    app:tint="@color/white2" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    android:text="TopUp Wallet"
+                                    android:textColor="@color/white2"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_qr_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="center"
+                                android:gravity="center_vertical"
+                                android:minWidth="100dp"
+                                android:orientation="horizontal"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/qr_code"
+                                    app:tint="@color/white2" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="8dp"
+                                    android:text="Show QR"
+                                    android:textColor="@color/white2"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                        <!--  <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="16dp"
+                              android:orientation="horizontal">
+
+
+                              <androidx.cardview.widget.CardView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  app:cardBackgroundColor="@color/white"
+                                  app:contentPadding="8dp"
+                                  app:cardCornerRadius="30dp"
+                                  >
+
+                                  <LinearLayout
+                                      android:layout_width="wrap_content"
+                                      android:minWidth="100dp"
+                                      android:layout_height="wrap_content"
+                                      android:gravity="center_vertical"
+                                      android:layout_gravity="center"
+                                      android:orientation="horizontal">
+
+                                      <ImageView
+                                          android:layout_width="20dp"
+                                          android:layout_height="20dp"
+                                          android:src="@drawable/ic_baseline_account_balance_wallet_24"
+                                          app:tint="@color/colorPrimaryDark" />
+
+                                      <TextView
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:text="TopUp"
+                                          android:gravity="center"
+                                          android:layout_gravity="center_vertical"
+                                          android:textColor="@color/black"
+                                          android:textStyle="bold"
+                                          android:paddingEnd="8dp"
+                                          android:paddingStart="8dp"/>
+                                  </LinearLayout>
+
+                              </androidx.cardview.widget.CardView>
+
+                              <View
+                                  android:layout_width="0dp"
+                                  android:layout_weight="1"
+                                  android:layout_height="wrap_content"/>
+
+                              <androidx.cardview.widget.CardView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  app:cardBackgroundColor="@color/white"
+                                  app:contentPadding="8dp"
+                                  android:layout_gravity="end"
+                                  app:cardCornerRadius="30dp"
+                                  >
+
+                                  <LinearLayout
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="wrap_content"
+                                      android:minWidth="100dp"
+                                      android:gravity="center_vertical"
+                                      android:layout_gravity="center"
+                                      android:orientation="horizontal">
+
+                                      <ImageView
+                                          android:layout_width="20dp"
+                                          android:layout_height="20dp"
+                                          android:src="@drawable/qr_code"
+                                          app:tint="@color/colorPrimaryDark" />
+
+                                      <TextView
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:text="Show QR"
+                                          android:layout_gravity="center_vertical"
+                                          android:textColor="@color/black"
+                                          android:textStyle="bold"
+                                          android:paddingEnd="8dp"
+                                          android:paddingStart="8dp"/>
+                                  </LinearLayout>
+
+                              </androidx.cardview.widget.CardView>
+
+                          </LinearLayout>-->
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_pager"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="156dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/red"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_kyc_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableStart="@drawable/ic_baseline_info_24"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="@color/white2"
+                            android:padding="16dp"
+                            android:text="Complete your kyc for aeps &amp; aadhaar pay services!\nClick here for kyc process"
+                            android:textColor="@color/white2" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_news"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_baseline_message_24"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="@color/black"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="5dp"
+                            android:maxLines="2"
+                            android:textSize="16sp"
+                            android:padding="16dp"
+                            android:textColor="@color/black"
+                            tools:text="News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News " />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_bank_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="5dp">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:padding="16dp"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/tv_bank_down"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:drawableStart="@drawable/ic_baseline_account_balance_24"
+                             android:drawablePadding="8dp"
+                             android:drawableTint="@color/black2"
+                             android:ellipsize="marquee"
+                             android:lineSpacingExtra="5dp"
+                             android:scrollHorizontally="true"
+                             android:singleLine="true"
+                             android:textColor="@color/red"
+                             android:shadowColor="@color/black2"
+                             android:shadowDx="1.5"
+                             android:shadowDy="1.3"
+                             tools:text="News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News " />
+
+                         <TextView
+
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="4dp"
+                             android:gravity="end"
+                             android:text="Click for all bank list"
+                             android:textColor="@color/colorPrimary" />
+                     </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="12dp">
+
+                        <LinearLayout style="@style/NormaLLStyle">
+
+                            <TextView
+                                style="@style/ServiceTitle"
+                                android:text="Payment Service" />
+
+                            <LinearLayout style="@style/ServiceHorizontalStyle">
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_wallet_one"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_nmoney" />
+
+                                    <TextView
+                                        android:id="@+id/tv_one"
+                                        style="@style/ServiceNameStyle"
+                                        android:text="A2Z Plus 1"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_wallet_two"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_nmoney" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="A2Z Plus 2"
+                                        android:id="@+id/tv_two"
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_wallet_three"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_nmoney" />
+
+                                    <TextView
+                                        android:id="@+id/tv_three"
+                                        style="@style/ServiceNameStyle"
+                                        android:text="A2Z Plus 3"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:id="@+id/ll_dmt_three"
+                                    style="@style/ServiceItemLayout">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/tv_blink_1"
+                                            android:textColor="@color/red"
+                                            android:gravity="center"
+                                            android:text="New"
+                                            android:rotation="30"
+                                            android:layout_alignParentRight="true"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+                                            <ImageView
+                                                style="@style/ServiceIconStyle"
+                                                android:src="@drawable/ic_launcher_nmoney" />
+
+                                            <TextView
+                                                style="@style/ServiceNameStyle"
+                                                android:text="Dmt One"
+
+                                                />
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout style="@style/ServiceHorizontalStyle">
+
+                                <LinearLayout
+
+                                    android:id="@+id/ll_upi"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_nmoney" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="UPI"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:visibility="invisible"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_nmoney" />
+
+                                    <TextView
+
+                                        style="@style/ServiceNameStyle"
+                                        android:text="A2Z Plus 1"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:visibility="invisible"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_nmoney" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="A2Z Plus 2"
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:visibility="invisible"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_nmoney" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="A2Z Plus 3"
+
+                                        />
+                                </LinearLayout>
+
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="12dp">
+
+                        <LinearLayout style="@style/NormaLLStyle">
+
+                            <TextView
+                                style="@style/ServiceTitle"
+                                android:text="Aeps &amp; Matm Service" />
+
+
+                            <LinearLayout style="@style/ServiceHorizontalStyle">
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_aeps_one"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_launcher_aeps2" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="AEPS 1"
+
+                                        />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_aeps_three"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_launcher_aeps2" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="AEPS 3"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:id="@+id/ll_matm"
+                                    style="@style/ServiceItemLayout">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/tv_blink_2"
+                                            android:textColor="@color/red"
+                                            android:gravity="center"
+                                            android:text="New"
+                                            android:rotation="30"
+                                            android:layout_alignParentRight="true"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+                                            <ImageView
+                                                style="@style/ServiceIconStyle"
+                                                android:padding="8dp"
+                                                android:src="@drawable/atm" />
+
+                                            <TextView
+                                                style="@style/ServiceNameStyle"
+                                                android:text="M-ATM"
+
+                                                />
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout
+
+                                    android:id="@+id/ll_mpos"
+                                    style="@style/ServiceItemLayout">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/tv_blink_3"
+                                            android:textColor="@color/red"
+                                            android:gravity="center"
+                                            android:text="New"
+                                            android:rotation="30"
+                                            android:layout_alignParentRight="true"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+                                            <ImageView
+                                                style="@style/ServiceIconStyle"
+                                                android:padding="8dp"
+                                                android:src="@drawable/atm" />
+
+                                            <TextView
+                                                style="@style/ServiceNameStyle"
+                                                android:text="M-POS / Sale"
+
+                                                />
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                   <!-- <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="8dp">
+
+                        <LinearLayout style="@style/NormaLLStyle">
+
+                            <TextView
+                                style="@style/ServiceTitle"
+                                android:text="AEPS Service" />
+
+                            <LinearLayout style="@style/ServiceHorizontalStyle">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_aeps_one"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_aeps" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="AEPS 1"
+
+                                        />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_aeps_three"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_aeps" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="AEPS 3"
+
+                                        />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_aadhar_pay"
+                                    style="@style/ServiceItemLayout"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_aeps" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:baselineAligned="false"
+
+                                        android:text="Aadhar Pay" />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    style="@style/ServiceItemLayout"
+                                    android:visibility="invisible">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/fastag" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Fasttag"
+
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="12dp">
+
+                        <LinearLayout style="@style/NormaLLStyle">
+
+                            <TextView
+                                style="@style/ServiceTitle"
+                                android:text="Recharge" />
+
+                            <LinearLayout style="@style/ServiceHorizontalStyle">
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_prepaid"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_mobile" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Prepaid"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_dth"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_dth" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="DTH"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_fasttag"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:layout_width="match_parent"
+                                        android:src="@drawable/fastag" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Fastag"
+
+                                        />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    style="@style/ServiceItemLayout"
+                                    android:visibility="invisible">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/fastag" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Fasttag"
+
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="5dp"
+                        app:contentPadding="12dp">
+
+                        <LinearLayout style="@style/NormaLLStyle">
+
+                            <TextView
+                                style="@style/ServiceTitle"
+                                android:text="Utility &amp; Bill Payment" />
+
+                            <LinearLayout style="@style/ServiceHorizontalStyle">
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_electricity"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_electricity" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Electricity"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_water"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_water" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Water"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_gas"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_gas" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Gas"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_insurance"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_insurence" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:baselineAligned="false"
+
+                                        android:text="Insurance" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout style="@style/ServiceHorizontalStyle">
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_loan_replayment"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_insurence" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Loan Repayment"
+
+                                        />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_postpaid"
+                                    style="@style/ServiceItemLayout">
+
+                                    <ImageView
+
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_mobile" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:baselineAligned="false"
+
+                                        android:text="Postpaid" />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    style="@style/ServiceItemLayout"
+                                    android:visibility="invisible">
+
+                                    <ImageView
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_gas" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:text="Gas"
+
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/ServiceItemLayout"
+                                    android:visibility="invisible">
+
+                                    <ImageView
+
+                                        style="@style/ServiceIconStyle"
+                                        android:src="@drawable/ic_launcher_insurence" />
+
+                                    <TextView
+                                        style="@style/ServiceNameStyle"
+                                        android:baselineAligned="false"
+
+                                        android:text="Insurance" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

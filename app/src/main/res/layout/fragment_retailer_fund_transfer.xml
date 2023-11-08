@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.a2zsuvidhaa.in.fragment.ReportFragment">
+ <LinearLayout
+     android:id="@+id/lin1"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="8dp"
+     android:layout_marginRight="8dp"
+     android:layout_marginTop="5dp"
+     android:layout_marginBottom="5dp"
+     android:orientation="horizontal">
+
+  <TextView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:textSize="12sp"
+      android:textStyle="bold"
+      android:text="Date/Id"
+      android:textColor="@color/text_color_2"/>
+
+  <TextView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.5"
+      android:textSize="10sp"
+      android:textStyle="bold"
+      android:gravity="center"
+      android:text="ShopName/RequestTo,Balance/Mode"
+      android:textColor="@color/text_color_2"/>
+
+
+
+  <TextView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Status/Amt"
+      android:gravity="right"
+      android:textSize="12sp"
+      android:textStyle="bold"
+      android:textColor="@color/text_color_2"/>
+
+ </LinearLayout>
+ 
+ <View
+     android:layout_width="match_parent"
+     android:layout_height="1dp"
+     android:id="@+id/view1"
+     android:layout_marginTop="5dp"
+     android:layout_below="@id/lin1"
+     android:background="#CCD6DD"/>
+
+ <androidx.recyclerview.widget.RecyclerView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_below="@id/view1"
+     android:id="@+id/recyclerView"
+     android:layout_above="@+id/lin2"
+     android:padding="8dp">
+
+ </androidx.recyclerview.widget.RecyclerView>
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:id="@+id/lin2"
+     android:layout_alignParentBottom="true"
+     android:layout_height="wrap_content"
+     android:visibility="gone"
+     android:orientation="horizontal">
+
+  <Button
+      android:layout_width="150dp"
+      android:layout_height="wrap_content"
+      android:text="Previous"
+      android:textAllCaps="false"
+      android:id="@+id/btn_previous"/>
+
+  <Button
+      android:layout_width="150dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:text="Next"
+      android:textAllCaps="false"
+      android:id="@+id/btn_next"/>
+
+ </RelativeLayout>
+
+ <ProgressBar
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_centerInParent="true"
+     tools:visibility="visible"
+     android:indeterminateDrawable="@drawable/myprogress_style"
+     android:visibility="invisible"
+     android:id="@+id/progressBar"/>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="No result found!"
+     android:gravity="center"
+     android:visibility="gone"
+     tools:visibility="visible"
+     android:id="@+id/tv_noResult"
+     android:textStyle="bold"
+     android:textSize="22sp"
+     android:layout_centerInParent="true"/>
+
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/btn_search"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentRight="true"
+     android:layout_margin="16dp"
+     android:src="@drawable/v_search" />
+
+</RelativeLayout>

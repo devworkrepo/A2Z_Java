@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:id="@+id/ll_main_layout"
+    android:gravity="center"
+    android:background="@drawable/bg_light_gray_10">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction Details"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:layout_margin="0dp"
+            style="@style/TextStyle1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Type"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="transaction type"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="14sp"
+                    android:id="@+id/tv_transaction_type"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Sender Mobile"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="902382484"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="14sp"
+                    android:id="@+id/tv_senderMobile"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_2"
+                    android:text="Beneficiary Name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="14sp"
+                    android:id="@+id/tv_beneName"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Account No"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:text="834389573892"
+                    android:id="@+id/tv_accountNo"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_2"
+                    android:text="Bank Name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="bank name"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="14sp"
+                    android:id="@+id/tv_bank_name"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="IFSC"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="ifsc"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="14sp"
+                    android:id="@+id/tv_ifsc"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color_2"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  :  "/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:id="@+id/tv_totalAmount"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="1dp"
+            android:background="#DAD4D4"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:baselineAligned="false">
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_color_2"
+                android:layout_height="wrap_content"
+                android:text="txn Amount"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_color_2"
+                android:layout_height="wrap_content"
+                android:text="Charge"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_color_2"
+                android:layout_height="wrap_content"
+                android:text="Total"/>
+
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="@dimen/_150sdp"
+            android:id="@+id/recyclerView">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <LinearLayout
+            android:layout_above="@+id/rel_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_2"
+                android:layout_height="wrap_content"
+                android:text="Confirm Amount"/>
+
+
+
+            <EditText
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:inputType="numberDecimal"
+                android:hint="0.0"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:id="@+id/ed_confirmAmount"/>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rel_action"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/_10sdp"
+            >
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/AppButton.Small.Primary"
+                android:id="@+id/btn_transfer"
+                android:layout_alignParentEnd="true"
+                android:text="Confirm"/>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/AppButton.Small.Red"
+                android:text="Cancel"
+                android:id="@+id/btn_cancel"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppButton" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:text">Button</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppButton.Primary" parent="AppButton">
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppButton.Red" parent="AppButton">
+        <item name="backgroundTint">@color/red</item>
+    </style>
+
+    <style name="AppButton.Small.Primary" parent="AppButton">
+        <item name="android:layout_height">36dp</item>
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+    </style>
+    <style name="AppButton.Small.Red" parent="AppButton">
+        <item name="android:layout_height">36dp</item>
+        <item name="backgroundTint">@color/red</item>
+    </style>
+
+
+</resources>

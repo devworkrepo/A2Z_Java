@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.a2zsuvidhaa.in.fragment.ReportFragment">
+
+ <androidx.recyclerview.widget.RecyclerView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:id="@+id/recyclerView"
+     android:layout_above="@+id/lin2"
+     android:padding="8dp">
+
+ </androidx.recyclerview.widget.RecyclerView>
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:id="@+id/lin2"
+     android:layout_alignParentBottom="true"
+     android:layout_height="wrap_content"
+     android:visibility="gone"
+     android:orientation="horizontal">
+
+  <Button
+      android:layout_width="150dp"
+      android:layout_height="wrap_content"
+      android:text="Previous"
+      android:textAllCaps="false"
+      android:id="@+id/btn_previous"/>
+
+  <Button
+      android:layout_width="150dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:text="Next"
+      android:textAllCaps="false"
+      android:id="@+id/btn_next"/>
+
+ </RelativeLayout>
+
+ <ProgressBar
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_centerInParent="true"
+     tools:visibility="visible"
+     android:indeterminateDrawable="@drawable/myprogress_style"
+     android:visibility="invisible"
+     android:id="@+id/progressBar"/>
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="No result found!"
+     android:gravity="center"
+     android:visibility="gone"
+     tools:visibility="visible"
+     android:id="@+id/tv_noResult"
+     android:textStyle="bold"
+     android:textSize="22sp"
+     android:layout_centerInParent="true"/>
+ <com.google.android.material.floatingactionbutton.FloatingActionButton
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/btn_search"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentRight="true"
+     android:layout_margin="16dp"
+     android:src="@drawable/v_search" />
+
+</RelativeLayout>

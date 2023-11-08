@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/zx_scan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </me.dm7.barcodescanner.zxing.ZXingScannerView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:id="@+id/tv_flash_status"
+            android:layout_margin="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_back_white_8"
+            tools:text="Flash On" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.a2zsuvidhaa.in.activity.PaymentGatewayActivity">
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Payment Mode" />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_white_5"
+        android:gravity="left"
+        android:inputType="number"
+        android:orientation="horizontal"
+        android:singleLine="true"
+
+        >
+        <Spinner
+            android:id="@+id/spn_pgmode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Amount" />
+
+        <EditText
+            android:id="@+id/ed_amount"
+            style="@style/AppEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_white_5"
+            android:hint="Minimum Amount 100"
+            android:maxLength="8"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charges" />
+
+        <EditText
+            android:enabled="false"
+            android:id="@+id/ed_charge"
+            style="@style/AppEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_white_5"
+            android:hint="Charges"
+            android:maxLength="8"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/charges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Charges" />
+
+        <TextView
+            style="@style/TextStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number" />
+
+        <EditText
+            android:id="@+id/ed_total"
+            style="@style/AppEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_white_5"
+            android:hint="Enter Mobile Number"
+            android:maxLength="10"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/ed_otp"
+            style="@style/AppEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_white_5"
+            android:hint="Enter OTP"
+            android:maxLength="4"
+            android:visibility="gone"
+            android:inputType="number" />
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_grey_5"
+            android:text="Submit"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:visibility="gone"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/layout_otp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_resend"
+            android:background="#5A5C5A"
+            android:text="Resend OTP"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/tv_error_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_orange_5"
+            android:padding="10dp"
+            android:text="error or exception , warning , message"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            tools:visibility="visible"
+            android:indeterminateDrawable="@drawable/myprogress_style"
+            />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:baselineAligned="false">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_color_3"
+                android:id="@+id/tv_txnAmount"
+                android:layout_height="wrap_content"
+                android:text="0.00"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_color_3"
+                android:id="@+id/tv_charge"
+                android:layout_height="wrap_content"
+                android:text="0.00"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_color_3"
+                android:id="@+id/tv_total"
+                android:layout_height="wrap_content"
+                android:text="0.00"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:text="1"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textColor="@color/text_color_2"
+            android:background="@drawable/bg_white_30"
+            android:id="@+id/tv_itemCount"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#DAD4D4"/>
+
+    </LinearLayout>
+
+</LinearLayout>

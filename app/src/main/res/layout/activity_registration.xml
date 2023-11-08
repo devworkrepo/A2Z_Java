@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.a2zsuvidhaa.in.activity.register.RegisterViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.register.RegistrationActivity">
+
+
+        <!--toolbar-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="6dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/sv_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_color"
+                    android:orientation="vertical">
+
+                    <com.shuhart.stepview.StepView
+                        android:id="@+id/step_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        app:sv_animationType="Line"
+                        app:sv_doneCircleColor="@color/green"
+                        app:sv_doneCircleRadius="12dp"
+                        app:sv_doneStepLineColor="@color/green"
+                        app:sv_doneStepMarkColor="@color/green"
+                        app:sv_doneTextColor="@color/white"
+                        app:sv_nextStepCircleColor="@color/grey"
+                        app:sv_nextStepLineColor="@color/grey"
+                        app:sv_nextTextColor="@color/colorPrimaryDark"
+                        app:sv_selectedCircleColor="@color/colorPrimaryDark"
+                        app:sv_selectedCircleRadius="12dp"
+                        app:sv_selectedStepNumberColor="@color/colorPrimary"
+                        app:sv_selectedTextColor="@color/white"
+                        app:sv_stepLineWidth="1dp"
+                        app:sv_stepNumberTextSize="12sp"
+
+                        app:sv_stepPadding="4dp"
+                        app:sv_stepViewStyle="@style/StepView"
+                        app:sv_typeface="@font/allerta" />
+
+                    <!--CONTENT PAGE-->
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/step_view"
+                        android:layout_above="@+id/ll_confirm_button">
+                        <LinearLayout
+                            android:id="@+id/ll_input_field"
+                            style="@style/NormaLLStyle"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="70dp"
+                            android:visibility="visible">
+                            <!--phone number layouts-->
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_phone_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                app:cardCornerRadius="5dp"
+                                tools:visibility="gone"
+                                app:contentPadding="12dp">
+
+                                <LinearLayout style="@style/NormaLLStyle">
+
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:hint="Mobile Number"
+                                        android:layout_height="wrap_content">
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/ed_mobile"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="match_parent"
+                                            android:background="@android:color/transparent"
+                                            android:inputType="number"
+                                            android:maxLength="10"
+                                            android:text="@={viewModel.mobileNumber}" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="4dp"
+                                        android:text="Enter 10 digits mobile number"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:visibility="gone"
+
+                                app:contentPadding="12dp"
+                                tools:visibility="gone">
+
+                                <LinearLayout style="@style/NormaLLStyle">
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:hint="Email ID"
+                                        android:layout_height="wrap_content">
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/ed_email"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="match_parent"
+                                            android:background="@android:color/transparent"
+                                            android:inputType="textEmailAddress"
+                                            android:text="@={viewModel.emailId}" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="4dp"
+                                        android:text="Enter email id eg: abc@xyz.com"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_pan_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:visibility="gone"
+                                app:contentPadding="12dp"
+                                tools:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_pan_number"
+                                    style="@style/NormaLLStyle">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:hint="Pan Card"
+                                        android:layout_height="wrap_content">
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/ed_pan_card"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="match_parent"
+                                            android:background="@android:color/transparent"
+                                            android:inputType="text"
+                                            android:text="@={viewModel.panNumber}" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="4dp"
+                                        android:text="Enter 10 character pan card number"/>
+
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                tools:visibility="visible"
+                                android:id="@+id/ll_final_detail">
+                                <androidx.cardview.widget.CardView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    app:contentPadding="12dp"
+                                    app:cardCornerRadius="5dp"
+                                    >
+
+                                    <LinearLayout
+
+                                        style="@style/NormaLLStyle">
+
+                                        <TextView
+                                            android:drawableTint="@color/green"
+                                            android:drawableEnd="@drawable/ic_check_tick"
+                                            android:layout_marginBottom="4dp"
+                                            style="@style/TextEditTextHeading"
+                                            android:text="Mobile Number" />
+
+                                        <TextView
+                                            android:id="@+id/tv_mobile"
+                                            android:textColor="@color/black"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:text=""
+                                            android:drawablePadding="4dp"
+                                            android:drawableStart="@drawable/ic_baseline_call_24"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:drawableTint="@color/green"
+                                            android:drawableEnd="@drawable/ic_check_tick"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginBottom="4dp"
+                                            style="@style/TextEditTextHeading"
+                                            android:text="Email ID" />
+
+                                        <TextView
+                                            android:id="@+id/tv_email"
+                                            android:textColor="@color/black"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:text=""
+                                            android:drawablePadding="4dp"
+                                            android:drawableStart="@drawable/ic_baseline_alternate_email_24"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:drawableTint="@color/green"
+                                            android:drawableEnd="@drawable/ic_check_tick"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginBottom="4dp"
+                                            style="@style/TextEditTextHeading"
+                                            android:text="Pan Card" />
+
+                                        <TextView
+                                            android:id="@+id/tv_pan_number"
+                                            android:textColor="@color/black"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            tools:text="CDUP1085N"
+                                            android:drawablePadding="4dp"
+                                            android:drawableStart="@drawable/ic_card_24"
+                                            android:textSize="16sp" />
+
+
+
+                                        <TextView
+                                            android:layout_marginTop="16dp"
+                                            android:drawableTint="@color/green"
+                                            android:drawableEnd="@drawable/ic_check_tick"
+
+                                            android:layout_marginBottom="4dp"
+                                            style="@style/TextEditTextHeading"
+                                            android:text="Name (as per pan card)" />
+
+                                        <TextView
+                                            android:id="@+id/tv_name"
+                                            android:textColor="@color/black"
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="wrap_content"
+                                            android:text=""
+                                            android:drawablePadding="4dp"
+                                            android:drawableStart="@drawable/ic_baseline_person_24"
+                                            android:textSize="16sp" />
+
+
+                                        <com.google.android.material.button.MaterialButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="16dp"
+                                            android:id="@+id/btn_reset_pan_verification"
+                                            app:icon="@drawable/ic_baseline_edit_24"
+                                            android:text="Reset Pan Verification"
+                                            android:textAllCaps="false"/>
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    app:contentPadding="12dp"
+                                    app:cardCornerRadius="5dp">
+
+                                    <LinearLayout
+                                        style="@style/NormaLLStyle">
+
+
+
+                                        <com.google.android.material.textfield.TextInputLayout
+
+                                            android:id="@+id/til_shop_name"
+                                            android:layout_width="match_parent"
+                                            android:hint="Shop Name"
+                                            android:layout_height="wrap_content">
+                                            <com.google.android.material.textfield.TextInputEditText
+                                                android:id="@+id/ed_shop_name"
+                                                android:textAllCaps="true"
+
+                                                android:layout_height="wrap_content"
+                                                android:layout_width="match_parent"
+                                                android:background="@android:color/transparent"
+                                                android:inputType="text"
+                                                android:text="@={viewModel.shopName}" />
+
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:id="@+id/til_shop_address"
+                                            android:layout_width="match_parent"
+                                            android:hint="Shop Address"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_height="wrap_content">
+                                            <com.google.android.material.textfield.TextInputEditText
+                                                android:id="@+id/ed_shop_address"
+                                                android:layout_height="wrap_content"
+                                                android:textAllCaps="true"
+                                                android:layout_width="match_parent"
+                                                android:background="@android:color/transparent"
+                                                android:inputType="text"
+                                                android:text="@={viewModel.shopAddress}" />
+
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                                        <com.google.android.material.textfield.TextInputLayout
+
+                                            android:id="@+id/til_password"
+                                            android:layout_width="match_parent"
+                                            android:hint="Password"
+                                            android:focusable="false"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_height="wrap_content">
+                                            <com.google.android.material.textfield.TextInputEditText
+                                                android:id="@+id/ed_password"
+                                                android:layout_height="wrap_content"
+                                                android:layout_width="match_parent"
+                                                android:background="@android:color/transparent"
+                                                android:inputType="text"
+                                                android:text="@={viewModel.password}" />
+
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:id="@+id/til_confirm_password"
+                                            android:layout_width="match_parent"
+                                            android:hint="Confirm Password"
+                                            android:layout_marginTop="8dp"
+                                            android:focusable="false"
+                                            android:layout_height="wrap_content">
+                                            <com.google.android.material.textfield.TextInputEditText
+                                                android:id="@+id/ed_confirm_password"
+                                                android:layout_height="wrap_content"
+                                                android:layout_width="match_parent"
+                                                android:background="@android:color/transparent"
+                                                android:inputType="text"
+                                                android:text="@={viewModel.confirmPassword}" />
+
+                                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    android:visibility="gone"
+                                    tools:visibility="visible"
+                                    app:cardCornerRadius="5dp"
+                                    app:contentPadding="16dp"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/TextAppearance.AppCompat.Medium"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Password Rules" />
+
+                                        <TextView
+                                            style="@style/TextAppearance.AppCompat.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:text="1. One Caps letter (e.g. ABC...Z)" />
+
+
+                                        <TextView
+                                            style="@style/TextAppearance.AppCompat.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="2. One Number(e.g. 12...3)" />
+
+                                        <TextView
+                                            style="@style/TextAppearance.AppCompat.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="3. One small letter(e.g. abc...z)" />
+
+                                        <TextView
+                                            style="@style/TextAppearance.AppCompat.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="4. One special characters (e.g. #,@,$,&amp;,*,)" />
+
+                                        <TextView
+                                            style="@style/TextAppearance.AppCompat.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="5. Password length should be 8 characters long" />
+
+                                        <TextView
+                                            style="@style/TextAppearance.AppCompat.Caption"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="6. e.g. India#1947" />
+
+                                    </LinearLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_confirm_button"
+                        style="@style/NormaLLStyle"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:onClick="@{viewModel::onProceedButtonClick}">
+
+                        <TextView
+                            android:id="@+id/tv_proceed_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:clickable="false"
+                            android:letterSpacing="0.08"
+                            android:text="Proceed"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                    <!--confirm button-->
+
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+
+           <RelativeLayout
+              android:background="@color/background"
+               android:id="@+id/rl_role_content"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:text="Select Role"
+                   android:textColor="@color/colorPrimaryDark"
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:layout_centerHorizontal="true"
+                   android:id="@+id/tv_title"
+                   android:layout_margin="16dp"
+                   style="@style/TextAppearance.MaterialComponents.Headline5"
+                   android:textStyle="bold"/>
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:layout_width="match_parent"
+                   android:id="@+id/recycler_view"
+                   android:layout_below="@id/tv_title"
+                   android:layout_above="@+id/btn_select_role"
+                   android:layout_height="match_parent"/>
+
+               <Button
+                   android:id="@+id/btn_select_role"
+                   android:layout_width="match_parent"
+                   android:layout_height="60dp"
+                   android:text="Next"
+                   android:visibility="gone"
+                   android:layout_margin="8dp"
+                   android:textAllCaps="true"
+                   android:layout_alignParentBottom="true"/>
+
+           </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

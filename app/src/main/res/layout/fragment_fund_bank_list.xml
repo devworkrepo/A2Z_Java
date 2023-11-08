@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:clickable="true"
+        tools:context=".activity.fund_request.FundRequestActivity"
+        android:focusable="true">
+
+        <include layout="@layout/toolbar_custom"
+            android:id="@+id/toolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            >
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/colorPrimaryDark"
+                android:layout_centerInParent="true"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+
+                   <androidx.cardview.widget.CardView
+                       android:visibility="gone"
+                       android:id="@+id/cv_note_cash_collect"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="8dp"
+                       app:cardCornerRadius="8dp"
+                       app:contentPadding="16dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:layout_marginTop="8dp"
+                               style="@style/TextAppearance.AppCompat.Body2"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Note : " />
+
+                           <TextView
+                               android:layout_marginTop="8dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* Balance is updated daily (10AM - 9PM) within 1 hour upon realisation of funds in our bank account." />
+
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* 100% penalty would be debited for the value of soiled or fake currency deposited to our account." />
+
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* Please Note: Excel One Stop Solution Pvt ltd will not be liable if payment is made with wrong details or to the wrong account, please double check all the details before making a cash deposit." />
+
+                       </LinearLayout>
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:visibility="gone"
+                       android:id="@+id/cv_note_bank_transfer"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="8dp"
+                       app:cardCornerRadius="8dp"
+                       app:contentPadding="16dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:layout_marginTop="8dp"
+                               style="@style/TextAppearance.AppCompat.Body2"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Note : " />
+
+                           <TextView
+                               android:layout_marginTop="8dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* No Charges to load money using this mode." />
+
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* Payee Name: Excel One Stop Solution Pvt ltd" />
+
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* If you are transferring funds from ICICI Bank to our ICICI Bank account then go to Transfers > Pay to Virtual Account option." />
+
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* Balance is updated daily within 30 min upon realisation of funds in our bank account." />
+
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* Note: Changing your registered mobile number with Excel One Stop Solution Pvt ltd will change your deposit bank account number." />
+                       </LinearLayout>
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                     android:visibility="gone"
+                       android:id="@+id/cv_note_cdm"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="8dp"
+                       app:cardCornerRadius="8dp"
+                       app:contentPadding="16dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:layout_marginTop="8dp"
+                               style="@style/TextAppearance.AppCompat.Body2"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Note : " />
+
+                           <TextView
+                               android:layout_marginTop="8dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* 100% penalty would be debited for the value of soiled or fake currency deposited to our account." />
+
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* Please Note: Excel One Stop Solution Pvt ltd will not be liable if payment is made with wrong details or to the wrong account, please double check all the details before making a cash deposit." />
+
+
+                       </LinearLayout>
+
+                   </androidx.cardview.widget.CardView>
+
+                   <androidx.cardview.widget.CardView
+                       android:visibility="gone"
+                       android:id="@+id/cv_note_cash_deposit"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="8dp"
+                       app:cardCornerRadius="8dp"
+                       app:contentPadding="16dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <TextView
+                               android:layout_marginTop="8dp"
+                               style="@style/TextAppearance.AppCompat.Body2"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Note : " />
+
+                           <TextView
+                               android:layout_marginTop="8dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* Balance is updated daily (10AM - 9PM) within 1 hour upon realisation of funds in our bank account." />
+
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* 100% penalty would be debited for the value of soiled or fake currency deposited to our account." />
+                           <TextView
+                               android:layout_marginTop="4dp"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="* Please Note: Excel One Stop Solution Pvt ltd will not be liable if payment is made with wrong details or to the wrong account, please double check all the details before making a cash deposit." />
+
+
+                       </LinearLayout>
+
+                   </androidx.cardview.widget.CardView>
+
+
+                   <androidx.recyclerview.widget.RecyclerView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:padding="8dp"
+                       tools:listitem="@layout/list_fund_request_bank"
+                       android:id="@+id/recycler_view" />
+               </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

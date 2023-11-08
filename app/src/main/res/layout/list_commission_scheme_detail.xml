@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/root_layout"
+        android:layout_margin="4dp"
+        app:contentPadding="16dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ll_service"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextStyleListLeft"
+                    android:text="Service" />
+
+                <TextView
+                    style="@style/TextStyleListDot" />
+
+
+                <TextView
+                    android:id="@+id/tv_service"
+                    style="@style/TextStyleListRight"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ll_operator"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextStyleListLeft"
+                    android:text="Operator" />
+
+                <TextView
+                    style="@style/TextStyleListDot" />
+
+
+                <TextView
+                    android:id="@+id/tv_operator"
+                    style="@style/TextStyleListRight"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ll_category"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextStyleListLeft"
+                    android:text="Category" />
+
+                <TextView
+                    style="@style/TextStyleListDot" />
+
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    style="@style/TextStyleListRight"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ll_min_amount"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextStyleListLeft"
+                    android:text="Min Amount" />
+
+                <TextView
+                    style="@style/TextStyleListDot" />
+
+
+                <TextView
+                    android:id="@+id/tv_min_amount"
+                    style="@style/TextStyleListRight"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ll_max_amount"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextStyleListLeft"
+                    android:text="Max Amount" />
+
+                <TextView
+                    style="@style/TextStyleListDot" />
+
+
+                <TextView
+                    android:id="@+id/tv_max_amount"
+                    style="@style/TextStyleListRight"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ll_agent_charge"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextStyleListLeft"
+                    android:text="Agent Charge" />
+
+                <TextView
+                    style="@style/TextStyleListDot" />
+
+
+                <TextView
+                    android:id="@+id/tv_agent_charge"
+                    style="@style/TextStyleListRight"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ll_agent_commission"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextStyleListLeft"
+                    android:text="Agent Commission" />
+
+                <TextView
+                    style="@style/TextStyleListDot" />
+
+
+                <TextView
+                    android:id="@+id/tv_agent_commission"
+                    style="@style/TextStyleListRight"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

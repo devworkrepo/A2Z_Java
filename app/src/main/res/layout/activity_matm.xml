@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+        <include layout="@layout/toolbar_custom"
+            android:id="@+id/toolbar"/>
+
+        <ScrollView
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_proceed"
+                    style="@style/AppButton"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:text="Proceed Transaction"
+                    mask:cornerRadius="0dp" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/btn_proceed">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical">
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            mask:contentPadding="8dp"
+                            mask:cardCornerRadius="8dp"
+                            android:layout_marginTop="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/til_customer_mobile"
+                                    android:layout_marginTop="8dp"
+                                    mask:startIconDrawable="@drawable/ic_baseline_contact_phone_24"
+                                    android:hint="Customer Mobile Number">
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:id="@+id/ed_customer_mobile"
+                                        android:inputType="number"
+                                        android:maxLength="10"
+                                        android:background="@android:color/transparent"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            mask:contentPadding="12dp"
+                            mask:cardCornerRadius="8dp"
+                            android:layout_marginTop="8dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Transaction Type"
+                                    style="@style/TextAppearance.AppCompat.Title"/>
+
+                                <RadioGroup
+                                    android:id="@+id/radio_group"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:id="@+id/rb_cash_withdrawal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Cash Withdrawal"/>
+
+                                    <RadioButton
+                                        android:id="@+id/rb_balance_enquiry"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Balance Enquiry"/>
+
+                                    <RadioButton
+                                        android:id="@+id/rb_mpos"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Sale/Purchase"/>
+
+                                </RadioGroup>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_marginTop="16dp"
+                                    android:id="@+id/til_amount"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Amount"
+                                    android:visibility="visible">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+
+                                        android:id="@+id/ed_amount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:singleLine="true"
+                                        android:textSize="30sp"
+                                        android:textStyle="bold"
+                                        tools:text="10,000" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_amount_hints"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:padding="8dp"
+                                    android:background="@drawable/bg_green_border"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Amount Hints"
+                                        android:textStyle="bold"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_amount_hint"
+                                        android:textStyle="normal"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        tools:text="Enter amount in range 100 to 20000"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_amount_hint2"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_width="wrap_content"
+
+                                        android:textStyle="normal"
+                                        android:layout_height="wrap_content"
+                                        android:text="Enter amount multiple 0f 10\nSuch as 100, 110,120, 10000..."/>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <FrameLayout
+                            android:layout_marginTop="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:id="@+id/fm_layout"/>
+
+                    </LinearLayout>
+
+
+                </androidx.core.widget.NestedScrollView>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+</layout>

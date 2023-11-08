@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:elevation="5dp"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
+
+
+
+        <ScrollView
+            android:layout_below="@id/toolbar"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="16dp"
+            tools:context=".activity.aeps.SettlementAddBankFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_back_white_8"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Information" />
+
+                <TextView
+                    style="@style/TextStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bank Name" />
+
+               <LinearLayout
+                   android:id="@+id/ll_bank_name"
+                   android:layout_width="match_parent"
+                   android:paddingStart="8dp"
+                   android:paddingEnd="8dp"
+                   android:clickable="true"
+                   android:background="@drawable/bg_white_5"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:id="@+id/tv_bank_name"
+                       android:layout_height="52dp"
+                       android:textStyle="bold"
+                       android:textColor="@color/text_color_2"
+                       android:layout_width="match_parent"
+                       android:textSize="17sp"
+                       android:gravity="center_vertical"
+                       android:layout_marginTop="2dp"
+                       android:hint="--Select Bank--" />
+               </LinearLayout>
+
+
+                <TextView
+                    style="@style/TextStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Universal Code" />
+
+                <EditText
+                    android:id="@+id/ed_ifse_code"
+                    style="@style/AppEditText2"
+                    android:hint="Enter IFSC Code" />
+
+                <TextView
+                    style="@style/TextStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Account Number" />
+
+
+                <EditText
+                    android:id="@+id/ed_account_number"
+                    style="@style/AppEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:hint="Enter Account Number"
+                    android:inputType="numberPassword" />
+
+
+                <TextView
+                    style="@style/TextStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Account Number" />
+
+                <EditText
+                    android:id="@+id/ed_confirm_account_number"
+                    style="@style/AppEditText2"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:hint="Confirm Account Number"
+                    android:inputType="number" />
+
+
+                <Button
+                    android:id="@+id/btn_add_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_light_blue_5"
+                    android:text="Add Bank"
+                    android:textColor="#fff" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/progress"
+            layout="@layout/my_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+
+    </RelativeLayout>
+
+
+</layout>

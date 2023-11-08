@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.a2zsuvidhaa.in.activity.SplashActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            tools:visibility="gone"
+            android:id="@+id/imageView"
+            android:src="@drawable/logo_small" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="सुविधा चाहिए तो A2Z के यहाँ आइये"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            tools:visibility="gone"
+            android:letterSpacing="0.2"
+            android:layout_below="@+id/imageView"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:id="@+id/tv_slogan"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="pageMargin">12dp</dimen>
+    <dimen name="offset">13dp</dimen>
+    <dimen name="pageMarginAndOffset">24dp</dimen>
+
+
+    <dimen name="dim_1">1dp</dimen>
+    <dimen name="dim_4">4dp</dimen>
+    <dimen name="dim_5">5dp</dimen>
+    <dimen name="dim_8">8dp</dimen>
+    <dimen name="dim_10">10dp</dimen>
+    <dimen name="dim_20">20dp</dimen>
+    <dimen name="dim_30">30dp</dimen>
+    <dimen name="dim_40">40dp</dimen>
+    <dimen name="dim_70">70dp</dimen>
+    <dimen name="dim_100">100dp</dimen>
+    <dimen name="dim_300">300dp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+
+    <dimen name="activityPadding">16dp</dimen>
+    <dimen name="placeholderImage">60dp</dimen>
+    <dimen name="placeholderTextHeight">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+
+</resources>

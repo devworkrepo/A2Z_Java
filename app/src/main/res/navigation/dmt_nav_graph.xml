@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/search_sender_fragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment android:id="@+id/search_sender_fragment"
+        android:name="com.a2zsuvidhaa.in.fragment.dmt.SearchSenderDmtFragment"
+        android:label="Search Sender"
+        tools:layout="@layout/fragment_search_sender_dmt">
+
+
+        <argument
+            app:argType="com.a2zsuvidhaa.in.util.enums.DmtType"
+            android:name="dmt_type"/>
+
+        <action
+            android:id="@+id/action_search_sender_fragment_to_beneficiary_listing_fragment"
+            app:destination="@id/beneficiary_listing_fragment" />
+        <action
+            android:id="@+id/action_search_sender_fragment_to_add_sender_fragment"
+            app:destination="@id/add_sender_fragment" />
+    </fragment>
+
+
+    <fragment android:id="@+id/add_sender_fragment"
+        android:name="com.a2zsuvidhaa.in.fragment.dmt.AddSenderFragment"
+        android:label="Add Sender Fragment"
+        tools:layout="@layout/fragment_add_sender">
+
+        <argument
+            app:argType="com.a2zsuvidhaa.in.util.enums.DmtType"
+            android:name="dmt_type"/>
+
+        <argument android:name="mobile_number"
+            app:argType="string"/>
+        <argument android:name="state"
+            app:argType="string"/>
+        <argument
+            app:argType="com.a2zsuvidhaa.in.util.enums.DmtSenderRegisterType"
+            android:name="register_type"/>
+
+
+
+        <argument
+            android:name="sender"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.a2zsuvidhaa.in.data.model.dmt.MoneySender" />
+
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/beneficiary_listing_fragment"
+        android:name="com.a2zsuvidhaa.in.fragment.dmt.BeneficiaryListingDmtFragment"
+        android:label="Beneficiary List"
+        tools:layout="@layout/fragment_beneficiary_listing_dmt">
+
+        <argument
+            app:argType="com.a2zsuvidhaa.in.util.enums.DmtType"
+            android:name="dmt_type" />
+
+        <argument
+            app:argType="string"
+            android:name="search_account"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <argument
+            app:argType="string"
+            android:name="search_ifsc"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <argument
+            android:name="sender"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.a2zsuvidhaa.in.data.model.dmt.MoneySender" />
+
+        <action
+            android:id="@+id/action_beneficiary_listing_fragment_to_add_beneficiary_fragment"
+            app:destination="@id/add_beneficiary_fragment"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <action
+            android:id="@+id/action_beneficiary_listing_fragment_to_money_transfer"
+            app:destination="@id/money_transfer" />
+        <action
+            android:id="@+id/action_beneficiary_listing_fragment_to_add_upi_beneficiary_fragment"
+            app:destination="@id/add_upi_beneficiary_fragment" />
+
+
+    </fragment>
+
+    <fragment android:id="@+id/add_beneficiary_fragment"
+        android:name="com.a2zsuvidhaa.in.fragment.dmt.AddBeneficiaryFragment"
+        android:label="Add Beneficiary"
+        tools:layout="@layout/fragment_add_beneficiary">
+
+        <argument
+            app:argType="com.a2zsuvidhaa.in.util.enums.DmtType"
+            android:name="dmt_type"/>
+
+        <argument
+            android:name="sender"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.a2zsuvidhaa.in.data.model.dmt.MoneySender" />
+
+    </fragment>
+
+    <fragment android:id="@+id/add_upi_beneficiary_fragment"
+        android:name="com.a2zsuvidhaa.in.fragment.dmt.UpiAddBeneficiaryFragment"
+        android:label="Add Beneficiary"
+        tools:layout="@layout/fragment_upi_add_beneficiary">
+
+
+        <argument
+            android:name="sender"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.a2zsuvidhaa.in.data.model.dmt.MoneySender" />
+
+    </fragment>
+
+    <fragment android:id="@+id/money_transfer"
+        android:name="com.a2zsuvidhaa.in.fragment.dmt.MoneyTransferFragment"
+        android:label="Money Transfer"
+        tools:layout="@layout/fragment_money_transfer">
+
+        <argument
+            app:argType="com.a2zsuvidhaa.in.util.enums.DmtType"
+            android:name="dmt_type"/>
+
+        <argument
+            android:name="sender"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.a2zsuvidhaa.in.data.model.dmt.MoneySender" />
+
+        <argument android:name="beneficiary"
+            app:argType="com.a2zsuvidhaa.in.data.model.dmt.Beneficiary"/>
+
+    </fragment>
+
+
+</navigation>

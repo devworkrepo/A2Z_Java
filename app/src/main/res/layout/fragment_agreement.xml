@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEF0F1"
+        android:padding="8dp">
+
+
+     <com.google.android.material.card.MaterialCardView
+
+         android:id="@+id/cv_form"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:elevation="5dp"
+         android:visibility="gone"
+         app:contentPadding="16dp"
+         tools:visibility="gone">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:maxLines="1" />
+       </com.google.android.material.textfield.TextInputLayout>
+
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:enabled="false"
+           android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:maxLines="2" />
+       </com.google.android.material.textfield.TextInputLayout>
+
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:hint="Mobile">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:maxLines="1" />
+       </com.google.android.material.textfield.TextInputLayout>
+
+
+       <Button
+           android:id="@+id/btn_proceed"
+           style="@style/AppButton.Primary"
+           android:layout_width="match_parent"
+           android:layout_alignParentBottom="true"
+           android:layout_marginTop="16dp"
+           android:text="Submit"
+           app:cornerRadius="0dp" />
+      </LinearLayout>
+
+
+     </com.google.android.material.card.MaterialCardView>
+
+
+     <com.google.android.material.card.MaterialCardView
+
+         android:id="@+id/cv_info"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:elevation="5dp"
+         android:visibility="gone"
+         app:contentPadding="16dp"
+         tools:visibility="visible">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:lineHeight="24dp"
+           android:text="Agreement Status"
+           android:textColor="@color/black"
+           android:textSize="24sp"
+           android:textStyle="bold" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:drawableStart="@drawable/ic_check_tick"
+           android:drawablePadding="16dp"
+           android:drawableTint="@color/green"
+           android:lineHeight="24dp"
+           android:textColor="@color/green"
+           android:id="@+id/tv_status_message"
+           android:textSize="14sp"
+           android:textStyle="normal"
+           tools:text="The mobile field is required.,The aadhaar number field is required." />
+
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/btn_download"
+           style="@style/AppButton.Primary"
+           android:layout_width="match_parent"
+           android:layout_alignParentBottom="true"
+           android:layout_marginTop="16dp"
+           android:text="Download Agreement"
+
+           app:cornerRadius="0dp"
+           app:icon="@drawable/ic_baseline_download_24" />
+      </LinearLayout>
+
+
+     </com.google.android.material.card.MaterialCardView>
+
+
+     <RelativeLayout
+         android:id="@+id/rl_web_view"
+         android:visibility="gone"
+         tools:visibility="gone"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+      <WebView
+          android:id="@+id/web_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@id/btn_agree">
+
+      </WebView>
+
+      <Button
+
+          android:visibility="gone"
+          tools:visibility="visible"
+          android:layout_alignParentBottom="true"
+          android:id="@+id/btn_agree"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Accept &amp; Proceed"/>
+
+     </RelativeLayout>
+
+     <include
+         android:id="@+id/progress"
+         layout="@layout/my_progress"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+</layout>

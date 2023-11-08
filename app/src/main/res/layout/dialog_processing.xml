@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_5"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/layout">
+
+
+
+    <pl.droidsonroids.gif.GifImageView
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/processing"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textColor="@color/success"
+        android:id="@+id/tv_heading"
+        android:textStyle="italic|bold"
+        android:text="Transaction On Processing..."/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/yellow_dark"
+        android:textStyle="italic|bold"
+        android:text="Don't press back button!\nplease wait"/>
+
+
+</LinearLayout>

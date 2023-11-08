@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimaryDark"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="Log Response"
+        android:textColor="@color/white2"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_below="@id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_back">
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/my_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+       <androidx.cardview.widget.CardView
+           android:layout_margin="12dp"
+           android:clipToOutline="true"
+           app:contentPadding="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <TextView
+                   android:id="@+id/tv_log_data"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="14sp"
+                   android:textColor="@color/colorPrimaryDark"
+                   android:lineHeight="28dp"
+                   android:textAlignment="textStart"/>
+           </ScrollView>
+       </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Done" />
+
+
+</RelativeLayout>

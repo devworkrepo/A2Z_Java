@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.a2zsuvidhaa.in.activity.ReportsActivity">
+
+    <item
+        android:id="@+id/notification"
+        android:orderInCategory="100"
+        android:title="Refresh"
+        android:icon="@drawable/ic_notifications"
+        android:iconTint="@color/white"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/refresh"
+        android:orderInCategory="101"
+        android:title="Refresh"
+        android:icon="@drawable/icon_refresh"
+        app:showAsAction="always" />
+</menu>

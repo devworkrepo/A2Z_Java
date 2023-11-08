@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout">
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+        android:tint="@color/black2"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_cross_close2"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="R-Offers"
+        android:textSize="22sp"
+
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="start"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/tv_title"
+        android:id="@+id/view_underline"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        android:layout_height="1.5dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_underline"
+        tools:listitem="@layout/list_offer"
+        android:layout_marginTop="8dp"
+        android:id="@+id/recycler_view"/>
+
+</RelativeLayout>

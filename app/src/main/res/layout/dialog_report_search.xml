@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/layout">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="45dp"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_2"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:text="Search With"/>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/v_cancel"
+                android:layout_gravity="right|center"
+                android:scaleType="fitXY"
+                android:id="@+id/btn_cancel"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FF9800"
+            android:layout_marginTop="0dp"/>
+
+
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:visibility="gone"
+               tools:visibility="visible"
+               android:id="@+id/ed_searchId"
+               android:textSize="18sp"
+               android:padding="10dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:layout_marginTop="15dp"
+               android:background="@drawable/bg_white"
+               android:gravity="left"
+               android:hint="Id"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/tv_start_date"
+               android:textSize="18sp"
+               android:padding="10dp"
+               android:layout_marginTop="15dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:background="@drawable/bg_white"
+               android:gravity="center"
+               android:drawableLeft="@drawable/date_picker"
+               android:text="Select start date"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/tv_end_date"
+               android:textSize="18sp"
+               android:drawableLeft="@drawable/date_picker"
+               android:padding="10dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:layout_marginTop="15dp"
+               android:background="@drawable/bg_white"
+               android:gravity="center"
+               android:text="Select end date"/>
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/ed_id"
+               android:textSize="18sp"
+               android:padding="10dp"
+               android:inputType="number"
+               android:visibility="gone"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="30dp"
+               android:layout_marginTop="15dp"
+               android:background="@drawable/bg_white"
+               android:gravity="left"
+               android:hint="Id"/>
+
+       </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/AppButton.Primary"
+            android:id="@+id/btn_search"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:text="Search"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="left"
+                android:layout_marginTop="30dp"
+                android:inputType="number"
+                android:orientation="horizontal"
+                android:singleLine="true"
+
+                >
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_5"
+                    >
+
+
+                    <Spinner
+
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:id="@+id/spn_idNumber"
+
+                        />
+
+                </LinearLayout>
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_red_5"
+                    android:src="@drawable/ic_refresh"
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/btn_refresh"
+                    android:textColor="#fff"/>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextStyle1"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_inputTitle"
+                android:text="Enter Retailer ID" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ll_search_refresh_number"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_white_5"
+                    >
+
+
+
+                    <EditText
+                        android:id="@+id/ed_input"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:paddingLeft="10dp"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:hint=""
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:background="@drawable/bg_light_blue_5"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:id="@+id/btn_search"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_search"
+                            android:textColor="#fff"/>
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:layout_centerInParent="true"
+                            tools:visibility="gone"
+                            android:indeterminateDrawable="@drawable/myprogress_style"
+                            android:visibility="gone"
+                            android:id="@+id/pg_search"/>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/tv_errorResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-2dp"
+                android:background="@drawable/bg_red_5"
+                android:fontFamily="@font/cagliostro"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="No Retailer Found!"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_content"
+                android:layout_below="@+id/tv_errorResponse"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                tools:visibility="visible"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="1dp"
+
+                    android:id="@+id/ll_retailerDetail"
+                    android:background="@drawable/bg_white_5"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextStyleCommission"
+                            android:textSize="16sp"
+                            android:text="ID"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  :  " />
+
+
+                        <TextView
+
+                            style="@style/TextStyleCommission"
+                            android:layout_weight="1.6"
+                            android:textSize="16sp"
+                            android:text="id"
+                            android:id="@+id/tv_id" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#CFC4C4"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextStyleCommission"
+                            android:textSize="16sp"
+                            android:text="Name" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  :  " />
+                        <TextView
+
+                            style="@style/TextStyleCommission"
+                            android:text="name"
+                            android:layout_weight="1.6"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_name" />
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#CFC4C4"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextStyleCommission"
+                            android:textSize="16sp"
+                            android:text="Shop Name"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  :  " />
+
+
+                        <TextView
+
+                            style="@style/TextStyleCommission"
+                            android:text="shop name"
+                            android:layout_weight="1.6"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_shopName" />
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#CFC4C4"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/TextStyleCommission"
+                            android:textSize="14sp"
+                            android:text="Mobile"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  :  " />
+
+
+                        <TextView
+
+                            style="@style/TextStyleCommission"
+                            android:text="mobile"
+                            android:layout_weight="1.6"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_mobile"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextStyle1"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Amount" />
+
+                <EditText
+                    android:id="@+id/ed_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_white_5"
+                    android:paddingLeft="10dp"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:hint="Enter Amount"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:id="@+id/tv_amountInWord"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color_2"
+                    android:text="" />
+
+
+                <TextView
+                    style="@style/TextStyle1"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Remark" />
+                <EditText
+                    android:id="@+id/ed_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:background="@drawable/bg_white"
+                    android:gravity="top"
+                    android:hint="Enter Remark"
+                    android:padding="10dp"
+                    android:textColor="@color/text_color_2"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="60dp"
+                    android:gravity="center"
+
+                    >
+
+                    <Button
+                        android:id="@+id/btn_transfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_light_blue_5"
+                        android:text="Transfer"
+                        android:textColor="#fff" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:background="@drawable/bg_orange_5"
+                        android:text="Login"
+                        android:textColor="#fff"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/pg_transfer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:indeterminateDrawable="@drawable/myprogress_style"
+                            android:visibility="invisible"
+                            tools:visibility="visible" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</ScrollView>
